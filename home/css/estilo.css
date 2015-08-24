@@ -385,6 +385,13 @@ galeria cursos / painel encontre curso
 
 }
 
+.bt-curso-destaque-ant:hover,
+.bt-curso-destaque-prox:hover{
+  background-color: #FF2805;
+  color:white;
+}
+
+
 /*posição do texto dos botoes*/
 .bt-curso-destaque-ant span,	
 .bt-curso-destaque-prox span{
@@ -593,7 +600,7 @@ Estilo blocos de informações / notícias / social / etc...
 }
 
 .bloco-info:hover{
-	box-shadow: 0 0 2px silver;
+	box-shadow: 0 0 2px #FF2805;
 }
 
 /*título dos blocos*/
