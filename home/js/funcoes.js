@@ -122,14 +122,13 @@ function controlesGaleriaImagens(){
 
 /*
 FUNÇÃO DE CONTROLE DA GALERIA DE CURSOS
-
-Ativa / Desativa a guia da galeria de cursos selecionada
 */
 function controlesGaleriaCursos(){
 
 
     var controle = {
 
+        //Ativa / Desativa a guia da galeria de cursos selecionada
         guiaSelecionada: function(){
             guiaGrad = document.querySelector("#gc-graduacao");
             labelGrad = document.querySelector("#gc-label-graduacao");
@@ -161,14 +160,13 @@ function controlesGaleriaCursos(){
 
 /*
 FUNÇÃO DE CONTROLE DO PAINEL ENCONTRE SEU CURSO
-
-Ativa / Desativa a guia do painel encontre seu curso
 */
 function controlesPainelEncontreCursos(){
 
 
     var controle = {
 
+        //Ativa / Desativa a guia do painel encontre seu curso
         guiaSelecionada: function(){
             guiaGrad = document.querySelector("#ec-graduacao");
             labelGrad = document.querySelector("#ec-label-graduacao");
@@ -191,7 +189,7 @@ function controlesPainelEncontreCursos(){
 
     }
 
-    //ecentos de clique adicionados
+    //eventos de clique adicionados
     document.querySelector("#ec-graduacao").addEventListener("click", controle.guiaSelecionada);
     document.querySelector("#ec-pos-graduacao").addEventListener("click", controle.guiaSelecionada);
 
