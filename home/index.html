@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<!--Marcação desenvolvida por:
+
+    Ayrton Monier
+
+Objetivo;
+Treinamento HTML5, CSS3 e JAVASCRIPT
+
+Treinador: VAT Tecnologia S.A / Dev. Fábio Assunção.
+
+******************************************************************
+A página está dividida em duas sessões principais:
+sessao principal:
+ -galeria de imagens
+ -galeria de cursos
+   aside:
+    banner propaganda
+    banner atendimento online
+    busca de cursos
+sessão de blocos:
+  - contém 6 blocos de ~ 300x300px com informações específicas cada
+*******************************************************************
+
+Data: 21/08/2015
+
+-->
+
+
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Treinamento-p2</title>
+  <link rel="stylesheet" href="css/estilo.css"/>
+</head>
+<body>
+
+
+<!--conteiner geral 100%-->
+<div class="conteiner">
+
+  <!-- cabeçalho 100% de largura -->
+  <header class="sessao-cabecalho largura-full">
+
+    <!--LINK de login no portal-->
+    <section class="largura-centro">
+      <a href="#"><small class="borda">>>Acesse os Portais para alunos e Professores</small></a>
+    </section>
+
+    <!-- cabeçalho - sessao 1 de 100% de largura (fundo)-->
+    <div class="fundo-sessao1-cabecalho largura-full">
+
+      <!--cabeçalho - sessao 1 - 970px de largura (info)-->
+      <section class="sessao1-cabecalho largura-centro">
+
+          <h1>Anhanguera</h1> 
+
+          <!--[LISTA DE NAVEGAÇÃO ORDENADA - menu 1]-->
+           <nav>
+             <ol class="lista-em-linha">
+              <li><a href="#">Atendimento </a></li>
+              <li><a href="#">Conhecimento que tranforma </a></li>
+              <li><a href="#">Notícias </a></li>
+              <li><a href="#">FIES e Bolsa </a></li>
+              <li><a href="#">Investidores / Investors</a></li>
+             </ol>
+           </nav>
+
+       </section>
+     </div>
+
+     <!--cabeçalho - sessao 2 de 100% de largura-->
+     <section class="sessao2-cabecalho largura-full">
+
+       <!--agrupamento header/menu2-->
+       <div class="largura-centro">
+
+        <!--[LISTA DE NAVEGAÇÃO ORDENADA - menu 2]-->
+        <nav>
+         <ol class="lista-em-linha">
+          <li><a href="#">A Instituição </a></li>
+          <li><a href="#">Graduação </a></li>
+          <li><a href="#">Pós-Graduação </a></li>
+          <li><a href="#">Cursos de extensão </a></li>
+          <li><a href="#">Pronatec </a></li>
+          <li><a href="#">LFG </a></li>
+          <li><a href="#">Vestibular</a></li>
+         </ol>
+        </nav>
+       </div>
+    </section>
+  </header>
+  <!--fim cabeçalho ->
+
+  <!--Conteiner do corpo-->
+  <div class="largura-centro">
+
+   <!-- sessao principal / section 1 (2 galerias + aside (banner propaganda + banner atendimento online)) -->
+   <section class="sessao-principal">
+
+
+     <!--sessao [GALERIA DE IMAGENS] bloco retangular-->
+     <section class="conteiner-galeria-imagens"> 
+
+       <figure>
+
+         <!--botoes para chamar imagens especificas-->
+
+           <span class="efeito bt-img1" >1</span>
+           <span class="efeito bt-img2" >2</span>
+           <span class="efeito bt-img3" >3</span>
+           <span class="efeito bt-img4" >4</span>
+           <span class="efeito bt-img5" >5</span>
+           <span class="efeito bt-img6" >6</span>
+
+
+         <div id="conteiner-imagens">
+
+           <a href="#" class="efeito" id="img1"><img src="img/banners/1.jpg" alt="Imagem 1"/></a>
+           <a href="#" class="efeito" id="img2"><img src="img/banners/2.jpg" alt="Imagem 2"/></a>
+           <a href="#" class="efeito" id="img3"><img src="img/banners/3.jpg" alt="Imagem 3"/></a>
+           <a href="#" class="efeito" id="img4"><img src="img/banners/4.jpg" alt="Imagem 4"/></a>
+           <a href="#" class="efeito" id="img5"><img src="img/banners/5.jpg" alt="Imagem 5"/></a>
+           <a href="#" class="efeito" id="img6"><img src="img/banners/6.jpg" alt="Imagem 6"/></a>
+
+         </div>
+
+         <figcaption></figcaption>
+
+       </figure>
+
+     </section>
+
+
+
+     <!--GALERIA DE CURSOS [estrutura de bloco retangular]-->
+     <section class="conteiner-galeria-cursos"> 
+      
+       <div>
+
+        <!--[titulo da guia] 40% de largura --> 
+         <header class="bloco-titulo-cor bloco-em-linha largura-do-bloco-x">
+           <h1>Cursos em destaque</h1>
+         </header>
+
+           <!--[guias (graduação/pós graduação)] 60% de largura--> 
+           <div class="bloco-guias bloco-em-linha largura-do-bloco-y">
+             <nav>
+              <label for="gc-graduacao" class="guias-galeria-curso guia-ativa-galeria-curso" id="gc-label-graduacao">
+                 <input type="radio" name="t-curso" checked="checked" id="gc-graduacao" />Graduação</label>
+                  
+                  <label for="gc-pos-graduacao" class="guias-galeria-curso" id="gc-label-pos-graduacao">
+                 <input type="radio" name="t-curso" id="gc-pos-graduacao"/>Pós-Graduação</label>
+             </nav>
+           </div>
+       </div>
+
+       <!--botao de controle [BOTAO ANTERIOR] -->
+       <div class="bt-curso-destaque-ant">
+         <span ><<</span>
+       </div>
+
+
+       <!--Agrupa conteúdo -->
+       <div class="grupo-cursos">
+
+
+           <!--CONTEUDO [curso 1]-->
+           <section class="bloco-curso">
+
+             <ol>
+               <h1>Administração</h1>
+               <li><p>Duração:<br> <span>4 anos</span></p></li>
+               <li><p>Tipo de formação:<br> <span>Bacharelado</span></p></li>
+               <li><p>Tipo de curso:<br> <span>Presencial / À Distância</span></p></li>
+             </ol>  
+             <a href="#">Saiba mais</a>  
+           </section>
+
+           <!--CONTEUDO [curso 2]-->
+           <section class="bloco-curso">
+
+             <ol>
+             <h1>Ciências contábeis</h1>
+               <li><p> Duração:<br><span>4 anos</span></p></li>
+               <li><p>Tipo de formação:<br> <span>Bacharelado</span></p></li>
+               <li><p>Tipo de curso:<br> <span>Presencial / À Distância</span></p></li>
+             </ol>  
+             <a href="#">Saiba mais</a> 
+           </section>
+
+        </div>
+
+
+        <!--botao de controle [BOTAO PRÓXIMO]-->
+        <div class="bt-curso-destaque-prox">
+          <span>>></span>
+        </div>
+
+      </section>
+
+     
+      <!--ASIDE PRINCIPAL-->
+      <div class="aside-principal">
+
+        <!--corpo / aside 1 (3 itens)-->
+        <aside>
+          
+          <!--agrupa os dois banners - [propaganda e atendimento online]-->
+          <div id="grupo-banners-aside">
+
+            <!--[BANNER PROPAGANDA] - IMG-->
+            <div class="banner-propaganda">
+              <img src="img/banners/b-aside.jpg" alt="Imagem propaganda"/>
+            </div>
+
+            <!--[BANNER ATENDIMENTO ONLINE] IMG-->
+            <div class="banner-atendimento">
+              <img src="img/banners/Atendimento.png" height="67" width="301" alt="Imagem atend. online"/>
+            </div>
+
+          </div>
+
+          <!--[PAINEL DE BUSCAS DE CURSOS GERAL]-->
+          <div class="conteiner-encontre-cursos"> 
+
+            <!--[titulo da guia] 100% de largura -->
+            <header class="titulo-preto-e-branco">
+              <h1> [icone] Encontre o seu curso e venha para Anhanguera</h1>
+            </header>
+
+            <!--[guias (graduação/pós graduação)] 50% de largura cada--> 
+             <nav>
+              <label for="ec-graduacao" class="guias-galeria-curso guia-ativa-galeria-curso" id="ec-label-graduacao">
+                 <input type="radio" name="ec-curso" checked="checked" id="ec-graduacao"/>Graduação</label>
+                  
+                  <label for="ec-pos-graduacao" class="guias-galeria-curso" id="ec-label-pos-graduacao">
+                 <input type="radio" name="ec-curso" id="ec-pos-graduacao"/>Pós-Graduação</label>
+             </nav>
+
+            <!--[botoes de check] -->
+            <form id="form-encontre-curso">
+               <label><input type="checkbox" name="check-exatas" value="1" checked>Exatas</label>
+               <label><input type="checkbox" name="check-humanas" value="2" checked>Humanas</label>
+               <label><input type="checkbox" name="check-biologicas" value="3" checked>Biologicas</label>         
+            </form>
+
+            <!--[conteúdo] -->
+            <ol class="lista-de-cursos-enc-cur">
+              <li><a href="#">Administração</a></li> 
+              <li><a href="#">Agronomia</a></li>
+              <li><a href="#">Arquitetura e Urbanismo</a></li>       
+              <li><a href="#">Artes Visuais</a></li>
+                          <li><a href="#">Administração</a></li> 
+              <li><a href="#">Agronomia</a></li>
+              <li><a href="#">Arquitetura e Urbanismo</a></li>       
+              <li><a href="#">Artes Visuais</a></li>
+                          <li><a href="#">Administração</a></li> 
+              <li><a href="#">Agronomia</a></li>
+              <li><a href="#">Arquitetura e Urbanismo</a></li>       
+              <li><a href="#">Artes Visuais</a></li>
+            </ol>
+
+           </div>
+
+         </aside>
+
+     </div>
+
+   </section>
+
+
+
+    <!-- sessao de blocos / section 2 (6 blocos de informações) -->
+    <section class="sessao-de-blocos">
+
+      <!--[bloco 1] - section-->
+      <section class="bloco-info bloco-info1">
+      
+        <p>Dicas de vestibular e de carreira para conquistar o sucesso profissional, você encontra aqui: curta nossa fanpage.</p>
+        [plugin Like do fb]
+      </section>
+
+
+      <!--[bloco 2] - section--> 
+      <section class="bloco-info bloco-info2">
+        <header>
+          <h1>Bolsas e crédito estudantil</h1>
+        </header>
+
+        <aside>
+          <h1>Estude na Anhanguera com o PRAVALER</h1>
+          <p>Comece seu curso pagando apenas 50% da mensalidade SEM JUROS e o restante você paga depois de formado.</p>
+        </aside>
+        
+        <footer class="rodape-bloco-info">
+          <a href="#">Veja como funciona</a>
+        </footer>
+      </section>
+
+
+
+      <!--[bloco 3] - section--> 
+      <section class="bloco-info bloco-info3">
+        <header>
+          <h1>Encontre a Anhanguera mais perto de você</h1>
+        </header>
+
+          <form action="#">
+             <select name="" id="">
+               <option value="0">Estado</option>
+             </select>
+
+             <select name="" id="">
+               <option value="0">Cidade</option>
+             </select>
+
+              <select name="" id="">
+                <option value="0">Unidade</option>
+              </select>
+
+              <select name="" id="">
+                <option value="0">Tipo de Curso</option>
+              </select>
+
+              <input type="submit" value="Enviar"/> 
+          </form>
+          
+      </section>
+
+
+      <!--[bloco 4] - section--> 
+      <section class="bloco-info bloco-info4">
+        <header>
+          <h1>Notícias</h1>
+        </header>
+
+        <aside>
+          <span><a href="#"><h1>Confira as vagas do FIES para a Faculdade Anhanguera</h1><a></span>
+          <a href="#"><p>O Grupo Kroton Educacional, do qual a Anhanguera faz parte está com mais de 10 mil vagas</p></a>
+        </aside>
+        
+        <footer class="rodape-bloco-info">
+          <a href="#">Veja todas as notícias</a> 
+        </footer>
+      </section>
+
+
+      <!--[bloco 5] - section--> 
+      <section class="bloco-info bloco-info5">
+
+        
+        <header>
+          <h1>Depoimento de quem faz</h1>
+        </header>
+
+        <aside>
+          <img src="img/banners/Enfermagem - Angélica Porto de Oliveira - Foto.jpg" alt="Foto do Aluno"/>
+          <h1>""</h1>
+          <p> A anhaguera e seus professores contribuíram de forma significativa para meu crescimento pessoal, profissional e acadêmico.</p>
+          <h2>""</h2>
+        </aside>
+        
+        <footer>
+          <h3>Angélica Porto de Oliveira</h3>
+        </footer>
+
+      </section>
+
+      <!--[bloco 6] - section--> 
+      <section class="bloco-info bloco-info6">
+          <img src="img/banners/banner-manual.jpg" alt="Ilustração do Manual do Aluno"/>
+      </section>
+
+   <!--fim corpo / section 2 [blocos] -->
+   </section>
+
+  </div>
+  <!--Fim do conteiner do corpo-->
+
+
+<!-- Rodapé -->
+<footer class="sessao-rodape">
+  
+    <section class="sessao1-rodape">
+
+      <!--agrupamento footer/nav 1-->
+      <div class="largura-centro">
+
+        <nav class="lista-em-linha">
+         <ol>
+           <li>Gostou do novo site? Compartilhe.</li>
+           <li>Plugin Like FB</li>
+           <li>plugin Twittar</li>
+           <li>plugin +1 Google</li>
+         </ol>
+        </nav>
+
+      </div>
+    </section>
+
+    <!--agrupamento footer/nav2 e nav3-->
+    <section class="sessao2-rodape">
+
+      <div class="largura-centro">
+        <nav class="posicao-x">
+         <ol class="lista-em-linha">
+           <li>Encontre a Anhanguera:</li>
+           <li><a href="#">(FB)</a></li>
+           <li><a href="#">(TW)</a></li>
+           <li><a href="#">(YT)</a></li>
+           <li><a href="#">(BG)</a></li>
+           <li><a href="#">(G+)</a></li>
+           <li><a href="#">(Lk)</a></li>
+         </ol>
+        </nav>
+       
+        <nav class="posicao-y">
+         <ol class="lista-em-linha">
+           <li><a href="#">Ouvidoria</a></li>
+           <li><a href="#">Perguntas Frequentes</a></li>
+           <li><a href="#">Atendimento On-line</a></li>
+           <li><a href="#">Fale Conosco</a></li>
+         </ol>
+        </nav>
+      </div>
+
+    </section>
+
+    <!--agrupamento footer/nav 4-->
+    <section class="sessao3-rodape">
+      <div class="largura-centro">
+
+      <p class="posicao-x">Copyright &copy; 2015 Anhanguera. Todos os direitos reservados.</p>
+      
+        <nav class="posicao-y">
+         <ol class="lista-em-linha">
+           <li><a href="#">Política de privacidade</a></li>
+           <li><a href="#">Imprensa</a></li>
+           <li><a href="#">Investidores / Investors</a></li>
+           <li><a href="#">MEC</a></li>
+           <li><a href="#">F.biz</a></li>
+         </ol>
+        </nav>      
+
+      </div>
+    </section>
+
+</footer>
+<!-- Fim rodapé -->
+
+</div>
+
+<script src="js/funcoes.js" type="text/javascript"></script>
+
+</body>
+</html>

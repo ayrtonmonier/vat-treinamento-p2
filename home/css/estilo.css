@@ -1,0 +1,1067 @@
+/*Estilo desenvolvido especialmente por:
+
+Ayrton Monier
+
+Objetivo;
+Treinamento HTML5, CSS3 e JAVASCRIPT
+
+Treinador: Dev. Fábio Assunção.
+
+DATA: 21/08/2015
+
+*/
+
+
+
+/*
+ESTILO DA PAGINA EM GERAL
+--------------------------------------------------
+
+
+conteiner pai*/
+
+@charset "UTF-8";
+
+.conteiner{
+	max-width: 100%;
+	background-color: rgba(241, 230, 230, 0.69);
+}
+
+
+/*cabeçalho de uma ponta á outra*/
+.largura-full{
+	max-width: 100%;
+}
+
+
+/*elementos da página centralizados à 970px*/
+.largura-centro{
+	max-width: 970px;
+	margin: 0px auto;
+}
+/**************************************************/
+
+
+
+/*
+GENÉRICOS
+--------------------------------------------------
+/*listas de navegação*/
+.lista-em-linha{
+	list-style: none;
+	padding: 0;
+}
+
+/*itens da lista de nav*/
+.lista-em-linha li{
+	display: inline-block;
+}
+
+
+
+
+
+/*
+CABEÇALHO - geral
+--------------------------------------------------
+
+link de acesso aos portais*/
+.sessao-cabecalho small{
+	padding: 3px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background: rgba(0,0,0,0.8);
+	display: inline;
+	float:right;
+	color: white;
+}
+
+
+/*espacamento ols cabeçalho*/
+.sessao-cabecalho ol{
+	padding: 10px 5px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+
+/*
+CABEÇALHO - sessao1
+--------------------------------------------------
+/*fundo sessao1 full*/
+.fundo-sessao1-cabecalho{
+	background: rgba(97, 95, 95, 0.16);
+}
+
+
+/*sessao1 centro*/
+.sessao1-cabecalho{
+	position:relative;
+	margin-top:0;
+	background: url("../img/logo.png") no-repeat 5px 6px;
+	height: 125px;
+}
+
+/*links sessao 1*/
+.sessao1-cabecalho a{
+	text-decoration: none;
+	font-family: sans-serif;
+	padding-right:5px;
+	color: #F52424; 
+	font-size: 10pt;
+}
+
+/*h1 semantico escondido*/
+.sessao1-cabecalho h1{
+	visibility:hidden;
+}
+
+/*posicionamento da lista 1*/
+.sessao1-cabecalho ol{
+	position:absolute;
+	bottom:0;
+	right:0;	
+}
+
+
+/*
+CABEÇALHO - sessao2
+--------------------------------------------------
+/* cor de fundo da sessao 2*/
+.sessao2-cabecalho{
+	background: rgb(255, 40, 5);
+	text-align: center;
+}
+
+/*tamanho da fonte dos itens*/
+.sessao2-cabecalho ol li{
+	font-size: 12pt;
+}
+
+
+/*efeito de mouse*/
+.sessao2-cabecalho ol li:hover{
+	background: rgb(255, 100, 1);
+}
+
+.sessao2-cabecalho a{
+	text-decoration: none;
+	color:white;
+	font-family: sans-serif;
+	padding:15px 10px; 
+}
+
+
+
+/*
+SESSÃO PRINCIPAL
+-------------------------
+estilo sessao principal
+-------------------------*/
+
+.sessao-principal{
+	position:relative;
+
+}
+
+
+
+
+/*
+GALERIA DE IMAGENS
+----------------------------------------------------------------
+estilo da estrutura da galeria de imagens e botões de controle
+----------------------------------------------------------------*/
+
+/*conteiner*/
+.conteiner-galeria-imagens{
+	max-width: 620px;
+	height: 295px;
+	margin:16px;
+	padding:0;
+	background: black;
+}
+
+/*figure*/
+.conteiner-galeria-imagens figure {
+    max-width: 100%;
+    height: inherit;
+    position: relative;
+    overflow: hidden;
+    margin: 50px auto;
+    z-index: 1;
+}
+
+/*imagem*/
+.conteiner-galeria-imagens img{
+	max-width: 100%;
+	height: 100%;
+}
+
+
+/*botoes de controle*/
+.conteiner-galeria-imagens span {
+	border-radius: 10%;
+	text-align: center;
+	background: rgba(0,0,0,.7); 
+	color: white;
+	cursor: pointer; 
+	opacity: 1;
+	position: absolute; 
+	bottom: 40%; 
+	width: 32px; 
+	height: 32px; 
+	z-index: 5;
+}
+
+/*a:imagens alinhadas no topo, à esquerda
+e transparente*/
+#conteiner-imagens a { 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	opacity: 0;
+}
+
+/*posição dos botoes*/
+.bt-img1{
+	right: 10px;
+	top: 10px;
+}
+.bt-img2{
+	right: 10px;
+	top: 50px;
+}
+.bt-img3{
+	right: 10px;
+	top: 90px;
+}
+.bt-img4{
+	right: 10px;
+	top: 130px;
+}
+.bt-img5{
+	right: 10px;
+	top: 170px;
+}
+.bt-img6{
+	right: 10px;
+	top: 210px;
+}
+
+/*efeitos de mouse dos botoes de controle*/
+.bt-img1:hover,
+.bt-img2:hover,
+.bt-img3:hover,
+.bt-img4:hover,
+.bt-img5:hover,
+.bt-img6:hover{
+	opacity: 0.5;
+}
+
+/*opacidade de 0 a 1 em 0.9 segundos*/
+.efeito{
+	transition:opacity ease-out 0.9s;
+}
+
+/*opacidade 1 da imagem ativa*/
+.ativo {
+	opacity: 1!important; 
+}
+
+
+
+
+/*
+GALERIA DE CURSOS
+----------------------------------------------
+estilo da estrutura da galeria de cursos 
+e botoes de controle
+----------------------------------------------*/
+
+/*conteiner*/
+.conteiner-galeria-cursos{
+	background: white;
+	border: 1px solid silver;
+	position: relative;
+	max-width: 620px;
+	height: 268px;
+	margin:16px;
+	padding:0;
+}
+
+/*titulo da galeria*/
+.bloco-titulo-cor h1{
+	color: #0F83A7;
+	font-size:11pt;
+	margin:10px;
+}
+
+/*bloco que contem as guias*/
+.bloco-guias{
+	float:right;
+	width:100%;
+	height: inherit;
+}
+
+/*config da guia*/
+.guias-galeria-curso{
+
+	font-size: 10pt;
+	background-color: #F3ECEC;
+	text-decoration: none;
+	text-align: center;
+	padding:10px 0;
+	width: 50%;
+	color:black;
+	display: inline-block;
+	float: left;
+	cursor: pointer;
+	border-bottom-left-radius: 15px;
+}
+
+/*efeito mouse / guia*/
+.guias-galeria-curso:hover{
+  background-color: #FF2805;
+  color:white;
+
+}
+
+/*quando a guia da 
+galeria cursos / painel encontre curso 
+é ativada*/
+.guia-ativa-galeria-curso{
+  background-color: #FF2805;
+  color:white;
+}
+
+/*esconde o radio input*/
+.guias-galeria-curso input{
+	display: none;
+}
+
+/*alinha as guias*/
+.bloco-em-linha{
+	display: inline-block;
+}
+
+/*largura do bloco esquerdo*/
+.largura-do-bloco-x{
+	width: 40%; /*para o título da guia*/
+}
+
+.largura-do-bloco-y{
+	width: 60%;/*para o bloco de guias*/
+}
+
+/*config botao [anterior] / [proximo]*/
+.bt-curso-destaque-ant,
+.bt-curso-destaque-prox{
+	bottom:15%;
+	height: 65%;
+	width: 4%;
+	font-size: 8pt;
+	vertical-align: center;
+	background: silver;
+	color:#FF2805;
+	position:absolute;
+	text-align: center;
+	margin: auto;
+	border: 0;
+	border-radius: 4px;
+	cursor:pointer;
+
+}
+
+/*posição botao [anterior] (lateral esquerda)*/
+.bt-curso-destaque-ant{
+	left:2px;
+	
+}
+
+/*posição botao [proximo] (lateral direita)*/
+.bt-curso-destaque-prox{
+	right:2px;
+
+}
+
+/*posição do texto dos botoes*/
+.bt-curso-destaque-ant span,	
+.bt-curso-destaque-prox span{
+	position:relative;
+	top:50%;
+}
+
+
+
+/*
+Conteúdo da galeria de cursos
+--------------------------------------------------
+estilo do conteúdo da galeria de cursos
+--------------------------------------------------*/
+
+/*config do bloco (1 curso/bloco)*/
+.bloco-curso {
+	padding-bottom: 5px;
+	position: relative;
+	width: 48%;
+	margin:0 0 6px 5px;
+	display: inline-block;
+}
+
+/*destaque negrito*/
+.bloco-curso span{
+	font-weight: bold;
+}
+
+/*espaçamento conteudo/bloco*/
+.bloco-curso ol{
+	padding: 0;
+	margin: 15px 0 30px 50px;
+}
+
+/*título [curso]*/
+.bloco-curso h1{
+	
+	margin:0 0 8px 0;
+}
+
+/*texto do conteudo*/
+.bloco-curso ol li{
+	list-style: none;
+	padding: 0;
+	font-size: 10pt;
+}
+.bloco-curso p{
+	margin: 1px;
+}
+
+
+/*config botão [saber mais]*/
+.bloco-curso a{
+	margin-right:20px;
+	color:white;
+	border-radius:5px;
+	padding: 3px 30px;
+	background: #FF2805;
+	font-size: 10pt;
+	text-decoration: none;
+	position: absolute;
+	right: 5%;
+	bottom:1%;
+}
+
+
+
+
+
+
+/*
+ASIDE PRINCIPAL
+---------------------------------------
+estilo do aside 1
+---------------------------------------
+*/
+
+.aside-principal{
+	margin:0;
+	position:absolute;
+	top:0;
+	right:20px;
+	
+}
+
+
+
+/*
+BANNER PROPAGANDA / BANNER FALE CONOSCO
+--------------------------------------------------
+estilo imagem do banner propaganda / fale conesco
+--------------------------------------------------
+*/
+
+.banner-atendimento img,
+.banner-propaganda img{
+	max-width: 320px;
+}
+
+.banner-atendimento img{
+	margin-top: 14px;
+}
+
+
+
+
+
+/*
+PAINEL - ENCONTRE SEU CURSO
+--------------------------------------------------
+estilo conteiner encontre seu curso
+--------------------------------------------------
+*/
+
+/*conteiner */
+.conteiner-encontre-cursos{
+	border: 1px solid silver;
+	max-width: 300px;
+	max-height: 300px;
+	margin-top: 10px;
+	background-color: white;
+}
+
+
+/*config título*/
+.titulo-preto-e-branco{
+
+	background: rgba(0,0,0,.9);
+	color:white;
+
+}
+.titulo-preto-e-branco h1{
+	margin:0;
+	padding:20px 0 20px 20px;
+	z-index: 2;
+}
+
+/*config formulario (checks)*/
+#form-encontre-curso{
+	margin:10px 0;
+}
+
+/*fonte dos checks(exatas / humanas / biologicas)*/
+#form-encontre-curso label{
+	font-size: 9pt;
+	margin-left: 5px;
+}
+
+
+/*lista de cursos*/
+.lista-de-cursos-enc-cur{
+	margin: 15px;
+	padding: 0;
+	list-style: none;
+	max-height: 100px;
+	overflow: scroll;
+
+}
+
+/*borda lista de cursos*/
+.lista-de-cursos-enc-cur li{
+	border-top: 1px solid silver;
+	max-width: 100%;
+
+}
+
+/*cor dos itens (cursos) e fonte*/
+.lista-de-cursos-enc-cur li a{
+	text-decoration: none;
+	color: #FF2805;
+	font-size: 9pt;
+
+}
+
+
+
+
+
+/*
+SESSAO DE BLOCOS
+----------------------------------------
+Estilo blocos de informações / notícias / social / etc...
+----------------------------------------
+*/
+
+/*config dos blocos*/
+.sessao-de-blocos{
+	margin:12px;
+	max-width: 100%;
+	text-align: center;
+	clear: both;
+}
+
+/*configuração padrão dos blocos de informações*/
+.bloco-info{
+	position:relative;
+	border: 1px solid silver;
+	max-width: 300px;
+	height: 228px;
+	margin: 2.2px;
+	padding: 2.3px;
+	display: inline-block;
+	vertical-align: top;
+	background: white;
+}
+
+.bloco-info:hover{
+	box-shadow: 0 0 2px silver;
+}
+
+/*título dos blocos*/
+.bloco-info header h1{
+	border-bottom: 1px solid silver;
+	text-align: left;
+	font-size: 10pt;
+	padding: 6px;
+	color:#1E968F;
+	margin:0;
+}
+
+
+/*rodapé dos blocos*/
+.bloco-info footer h1{
+	border-top:1px solid silver;
+	text-decoration: none;
+	position:absolute;
+	bottom:5px;
+}
+
+
+/*config. blocos de notícias*/
+.rodape-bloco-info{
+	border-top: 1px solid silver;
+	padding-top:8px;
+	position:absolute;
+	left: 0;
+	bottom:0;
+	width: 100%;
+	height: 35px;
+	text-decoration: none;
+}
+
+/*blocos de links*/
+.rodape-bloco-info a{
+	text-decoration: none;
+	color: #FF2805;
+	font-weight: bold;
+	font-size: 11pt;
+	position: relative;
+	left: 40px;
+}
+
+
+/*
+BLOCO 1
+----------------------------------------
+Estilo blocos de informações / notícias / social / etc...
+----------------------------------------
+*/
+/*bloco 1 - rede social*/
+.bloco-info1{
+	
+}
+
+
+/*bloco 1 - config paragrafo*/
+.bloco-info1 p{
+	text-align: center;
+	margin: 40px 10px;
+	font-size:13pt;
+}
+
+
+/*
+BLOCO 2
+----------------------------------------
+bloco 2 bolsas e creditos
+----------------------------------------*/
+.bloco-info2{
+	position:relative;
+}
+
+/*config titulo bloco 2*/
+.bloco-info2 aside h1{
+	text-align: left;
+	margin: 10px 40px;
+}
+
+/*config paragrafo bloco 2*/
+.bloco-info2 aside p{
+	text-align: left;
+	margin: 10px 40px;
+}
+
+/*config paragrado do aside do bloco 2*/
+.bloco-info2 aside p{
+	font-size:11pt;
+}
+
+
+
+/*
+BLOCO 3
+----------------------------------------
+encontre a anhanguera
+----------------------------------------*/
+
+.bloco-info3{
+	position: relative;
+}
+
+/* bloco 3 encontre a anhanguera*/
+.bloco-info3 select{
+	display: block;
+	width: 280px;
+	margin:10px 10px;
+}
+
+/*inputs select*/
+.bloco-info3 input{
+	color: white;
+	background: #FF2805;
+	border:none;
+	border-radius: 5px;
+	padding:2px 20px;
+	position:absolute;
+	right: 13px;
+	bottom: 11px;
+
+
+}
+
+.bloco-info3 form{
+	max-width: 100%;
+}
+
+
+/*
+BLOCO 4
+----------------------------------------
+Notícias
+----------------------------------------*/
+.bloco-info4{
+	position:relative;
+}
+
+/*título*/
+.bloco-info4 aside h1{
+	font-size:11pt;
+	margin: 15px 30px 10px 30px;
+	text-align: left;
+	font-size:13pt;
+}
+
+/*paragrafo*/
+.bloco-info4 aside p{
+	font-size:9pt;
+	text-align: left;
+	margin: 0 30px;
+}
+
+
+/*links*/
+.bloco-info4 aside span a{
+	text-decoration: none;
+}
+
+
+
+/*
+BLOCO 5
+----------------------------------------
+depoimento de quem faz
+----------------------------------------*/
+.bloco-info5{
+	position: relative;
+}
+
+/*títulos*/
+.bloco-info5 aside h1,
+.bloco-info5 aside h2{
+	font-size:20pt;
+	margin:0;
+	color:silver;	
+}
+
+/*parágrafo*/
+.bloco-info5 aside p{
+	font-size:9.5pt;
+	text-align: left;
+	margin:0;
+	
+}
+
+/*img*/
+.bloco-info5 img{
+
+	float: left;
+	margin: 10px;
+	width: 95px;
+
+}
+
+
+/*título ASIDE*/
+.bloco-info5 aside h1{
+	text-align: left;
+}
+
+/*subtítulo ASIDE*/
+.bloco-info5 aside h2{
+	text-align: right;
+}
+
+/*subtítulo rodapé*/
+.bloco-info5 footer h3{
+	font-size:10pt;
+	text-align: left;
+	margin:8px;
+	clear: both;
+	color: #D22407;
+}
+
+
+/*
+BLOCO 6
+----------------------------------------
+bloco 6 manual do aluno
+----------------------------------------*/
+.bloco-info6{
+	overflow: hidden;
+	max-width: 96%;
+}
+
+.bloco-info6 img{
+	max-width: 100%;
+	
+}
+
+
+
+
+
+/*
+------------------------------------------
+RODAPÉ
+-----------------------------------------*/
+/*geral*/
+.sessao-rodape{
+	font-size:10pt;
+	max-width: 100%;
+	padding-left: 0;
+}
+
+/*ancoras do rodape*/
+.sessao-rodape a{
+	text-decoration: none;
+	color:white;
+	font-family: sans-serif;
+	padding-right:5px; 
+}
+
+/*espaçamento listas*/
+.sessao-rodape ol{
+	padding:7px 0;
+	margin:0;
+}
+
+/*config sessão 1*/
+.sessao1-rodape{
+	text-align: right;
+	background: rgba(0,0,0,0.8);
+	color: white;
+}
+
+/*config sessão 2*/
+.sessao2-rodape{
+	background: rgba(255, 40, 5, 0.93);
+	color:white;
+}
+
+/*config sessão 3*/
+.sessao3-rodape{
+	color:white;
+	background: rgba(255,1,1,1);
+}
+
+
+
+
+/*posição de links da esquerda*/
+.posicao-x{
+	display: inline-block;
+	text-align: left;
+	width: 49.7%;
+}
+
+/*posição de links da direita*/
+.posicao-y{
+	display: inline-block;
+	text-align: right;
+	width: 49.7%
+}
+
+
+
+
+/*SESSÃO RESPONSÍVIDADE
+PARA: 980px*/
+@media screen and (max-width: 980px){
+
+
+	/*responsividade - cabeçalho*/
+	.sessao1-cabecalho ol{
+		text-align: center;
+	}
+
+
+	/*RODAPÉ*/
+	.sessao-rodape{
+		font-size:9pt;
+	}
+
+	/*RODAPÉ
+	centralizar*/
+	.sessao1-rodape,
+	.sessao2-rodape
+	.sessao3-rodape{
+		text-align: center;
+	}
+
+	/*RODAPÉ
+	itens da esquerda e 
+	direita agora no centro*/
+	.posicao-x,
+	.posicao-y{
+		text-align: center;
+		width: 100%
+	}
+
+	/*GALERIA DE IMAGENS 
+	centraliza na pagina*/
+	.conteiner-galeria-imagens{
+		margin:20px auto;
+	}
+
+	/*GALERIA DE CURSOS
+	centraliza na pagina*/
+	.conteiner-galeria-cursos{
+		margin:20px auto;
+	}
+
+	/*ASIDE PRINCIPAL  ajustado para
+	ficar na horizontal com espaçamento 
+	para colocar os itens lado a lado 
+	na horizontal e centralizado na
+	pagina*/
+	.aside-principal{
+		position:relative;
+		top:0;
+		right:0;
+		margin:0 auto;
+		max-width: 620px;
+		height: 300px;
+	}
+
+	/*[PAINEL ENCONTRE SEU CURSO] flutua
+	à esquerda no aside configurado acima*/
+	.conteiner-encontre-cursos{
+		height: 295px;
+		margin:0;
+		float:left;
+	}
+
+	/*lLISTA DE CURSOS [painel encontre
+	seu curso] aumenta um pouco a aLtura*/
+	.lista-de-cursos-enc-cur {
+    	max-height: 130px;
+    }
+
+	/*O GRUPO DE BANNERs flutua
+	à direita no ASIDE configurado acima*/
+	#grupo-banners-aside{
+		float:right;
+		margin:0;
+	}
+
+}
+
+
+
+@media screen and (max-width:647px){
+	
+	/*GALERIA DE IMAGENS*/
+	.conteiner-galeria-imagens{
+		max-width: 90%;
+		height: 270px;
+		clear: both;
+	}
+
+	/*GALERIA DE CURSOS
+	tamanho da fonte da guia*/
+	.guias-galeria-curso{
+		font-size: 7pt;
+	}
+
+
+	/*GALERIA DE CURSOS
+	tamnaho da fonte do título da
+	galeria*/
+	.bloco-titulo-cor h1{
+		font-size: 9pt;
+	}
+
+	/*GALERIA DE CURSOS
+	fonte e espaçamentos*/
+	.conteiner-galeria-cursos{
+		font-size: 9pt;
+		max-width: 90%;
+		height: 250px;
+		overflow: auto;
+	}
+
+
+	/*BLOCO DE CURSOS
+	espaçamento*/
+	.bloco-curso {
+		width: 95%;
+		margin: 15px;
+	}
+
+	/*ASIDE PRINCIPAL
+	largura exata para centralizar o 
+	[painel encontre seu curso] e os 
+	banners agrupados */
+	.aside-principal{
+
+		max-width: 300px;
+	}
+
+	
+}
+
+@media screen and (max-width: 440px){
+	
+	/*GALERIA DE CURSOS
+	título da galeria*/
+	.bloco-titulo-cor h1{
+		font-size: 8pt;
+	}
+
+	/*GALERIA DE CURSOS
+	fonte span (conteudo)*/
+	.conteiner-galeria-cursos span{
+		font-size: 8pt;
+	}
+	
+}
+
+
+@media screen and (max-width: 340px){
+	
+	/*GALERIA DE CURSOS
+	título da galeria*/
+	.bloco-titulo-cor h1{
+		font-size: 8pt;
+	}
+
+	/*GALERIA DE CURSOS
+	fonte span (conteudo)*/
+	.conteiner-galeria-cursos span{
+		font-size: 8pt;
+	}
+	
+}
+
+
+
+
