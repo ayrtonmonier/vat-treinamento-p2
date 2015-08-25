@@ -22,8 +22,16 @@ conteiner pai*/
 
 @charset "UTF-8";
 
+/*medidas body*/
+body{
+	margin:-10px auto;
+	padding:0;
+}
+
+/*conteiner principal 100% do corpo*/
 .conteiner{
 	max-width: 100%;
+	padding:0;
 	background-color: rgba(241, 230, 230, 0.69);
 }
 
@@ -60,13 +68,12 @@ GENÉRICOS
 
 
 
-
 /*
 CABEÇALHO - geral
 --------------------------------------------------
 
 link de acesso aos portais*/
-.sessao-cabecalho small{
+.sessao-cabecalho a p{
 	padding: 3px;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
@@ -74,6 +81,8 @@ link de acesso aos portais*/
 	display: inline;
 	float:right;
 	color: white;
+	margin: 0;
+	font-size: 8.5pt;
 }
 
 
@@ -188,7 +197,7 @@ estilo da estrutura da galeria de imagens e botões de controle
     height: inherit;
     position: relative;
     overflow: hidden;
-    margin: 50px auto;
+    margin: 20px auto;
     z-index: 1;
 }
 
@@ -318,6 +327,7 @@ e botoes de controle
 	float: left;
 	cursor: pointer;
 	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
 }
 
 /*efeito mouse / guia*/
@@ -359,7 +369,7 @@ galeria cursos / painel encontre curso
 .bt-curso-destaque-prox{
 	bottom:15%;
 	height: 65%;
-	width: 4%;
+	width: 5%;
 	font-size: 8pt;
 	vertical-align: center;
 	background: silver;
@@ -370,6 +380,7 @@ galeria cursos / painel encontre curso
 	border: 0;
 	border-radius: 4px;
 	cursor:pointer;
+	z-index:1;
 
 }
 
@@ -407,6 +418,11 @@ Conteúdo da galeria de cursos
 estilo do conteúdo da galeria de cursos
 --------------------------------------------------*/
 
+.grupo-cursos ol{
+	display: block;
+}
+
+
 /*config do bloco (1 curso/bloco)*/
 .bloco-curso {
 	padding-bottom: 5px;
@@ -424,7 +440,7 @@ estilo do conteúdo da galeria de cursos
 /*espaçamento conteudo/bloco*/
 .bloco-curso ol{
 	padding: 0;
-	margin: 15px 0 30px 50px;
+	margin: 0 0 30px 15px;
 }
 
 /*título [curso]*/
@@ -457,7 +473,6 @@ estilo do conteúdo da galeria de cursos
 	right: 5%;
 	bottom:1%;
 }
-
 
 
 
@@ -511,7 +526,7 @@ estilo conteiner encontre seu curso
 .conteiner-encontre-cursos{
 	border: 1px solid silver;
 	max-width: 300px;
-	max-height: 300px;
+	height: 270px;
 	margin-top: 10px;
 	background-color: white;
 }
@@ -545,11 +560,12 @@ estilo conteiner encontre seu curso
 /*lista de cursos*/
 .lista-de-cursos-enc-cur{
 	margin: 15px;
-	padding: 0;
+	padding: 2px;
 	list-style: none;
-	max-height: 100px;
-	overflow: scroll;
 
+	width: 90%;
+	height: 100px;
+	overflow: scroll;
 }
 
 /*borda lista de cursos*/
@@ -569,8 +585,6 @@ estilo conteiner encontre seu curso
 
 
 
-
-
 /*
 SESSAO DE BLOCOS
 ----------------------------------------
@@ -586,6 +600,7 @@ Estilo blocos de informações / notícias / social / etc...
 	clear: both;
 }
 
+
 /*configuração padrão dos blocos de informações*/
 .bloco-info{
 	position:relative;
@@ -598,6 +613,7 @@ Estilo blocos de informações / notícias / social / etc...
 	vertical-align: top;
 	background: white;
 }
+
 
 .bloco-info:hover{
 	box-shadow: 0 0 2px #FF2805;
@@ -754,7 +770,6 @@ Notícias
 	margin: 0 30px;
 }
 
-
 /*links*/
 .bloco-info4 aside span a{
 	text-decoration: none;
@@ -789,11 +804,9 @@ depoimento de quem faz
 
 /*img*/
 .bloco-info5 img{
-
 	float: left;
 	margin: 10px;
 	width: 95px;
-
 }
 
 
@@ -881,8 +894,6 @@ RODAPÉ
 }
 
 
-
-
 /*posição de links da esquerda*/
 .posicao-x{
 	display: inline-block;
@@ -898,11 +909,9 @@ RODAPÉ
 }
 
 
-
-
 /*SESSÃO RESPONSÍVIDADE
 PARA: 980px*/
-@media screen and (max-width: 980px){
+@media only screen and (max-width: 980px){
 
 
 	/*responsividade - cabeçalho*/
@@ -968,9 +977,9 @@ PARA: 980px*/
 	}
 
 	/*lLISTA DE CURSOS [painel encontre
-	seu curso] aumenta um pouco a aLtura*/
+	seu curso] aumenta um pouco a altura*/
 	.lista-de-cursos-enc-cur {
-    	max-height: 130px;
+    	height: 133px;
     }
 
 	/*O GRUPO DE BANNERs flutua
@@ -984,19 +993,19 @@ PARA: 980px*/
 
 
 
-@media screen and (max-width:647px){
+@media only screen and (max-width:647px){
 	
-	/*GALERIA DE IMAGENS*/
+	/*GALERIA DE IMAGENS
+	conteiner retangular*/
 	.conteiner-galeria-imagens{
 		max-width: 90%;
 		height: 270px;
-		clear: both;
 	}
 
 	/*GALERIA DE CURSOS
 	tamanho da fonte da guia*/
 	.guias-galeria-curso{
-		font-size: 7pt;
+		font-size: 9pt;
 	}
 
 
@@ -1007,20 +1016,19 @@ PARA: 980px*/
 		font-size: 9pt;
 	}
 
+
 	/*GALERIA DE CURSOS
 	fonte e espaçamentos*/
 	.conteiner-galeria-cursos{
-		font-size: 9pt;
 		max-width: 90%;
 		height: 250px;
-		overflow: auto;
+		overflow: hidden;
 	}
-
 
 	/*BLOCO DE CURSOS
 	espaçamento*/
 	.bloco-curso {
-		width: 95%;
+		width: 85%;
 		margin: 15px;
 	}
 
@@ -1032,11 +1040,10 @@ PARA: 980px*/
 
 		max-width: 300px;
 	}
-
 	
 }
 
-@media screen and (max-width: 440px){
+@media only screen and (max-width: 440px){
 	
 	/*GALERIA DE CURSOS
 	título da galeria*/
@@ -1053,20 +1060,9 @@ PARA: 980px*/
 }
 
 
-@media screen and (max-width: 340px){
-	
-	/*GALERIA DE CURSOS
-	título da galeria*/
-	.bloco-titulo-cor h1{
-		font-size: 8pt;
-	}
+@media only screen and (max-width: 340px){
 
-	/*GALERIA DE CURSOS
-	fonte span (conteudo)*/
-	.conteiner-galeria-cursos span{
-		font-size: 8pt;
-	}
-	
+	/*Primeiros SMARTS*/
 }
 
 
