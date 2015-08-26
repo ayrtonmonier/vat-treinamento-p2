@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*Estilo desenvolvido especialmente por:
 
 Ayrton Monier
@@ -9,49 +11,40 @@ Treinador: Dev. Fábio Assunção.
 
 DATA: 21/08/2015
 
+-------------------------------------------------
+ESTILO DA PAGINA EM GERAL
+--------------------------------------------------
 */
 
 
-
-/*
-ESTILO DA PAGINA EM GERAL
---------------------------------------------------
-
-
-conteiner pai*/
-
-@charset "UTF-8";
-
-/*medidas body*/
 body{
-	margin:-10px auto;
 	padding:0;
+	margin:0;
 }
 
-/*conteiner principal 100% do corpo*/
+/*engloba TUDO*/
 .conteiner{
-	max-width: 100%;
+	margin:0;
 	padding:0;
+	max-width: 100%;
 	background-color: rgba(241, 230, 230, 0.69);
 }
 
-
-/*cabeçalho de uma ponta á outra*/
+/*cabeçalho de uma ponta à outra*/
 .largura-full{
 	max-width: 100%;
 }
-
 
 /*elementos da página centralizados à 970px*/
 .largura-centro{
 	max-width: 970px;
 	margin: 0px auto;
 }
-/**************************************************/
 
 
 
 /*
+--------------------------------------------------
 GENÉRICOS
 --------------------------------------------------
 /*listas de navegação*/
@@ -67,12 +60,13 @@ GENÉRICOS
 
 
 
-
 /*
-CABEÇALHO - geral
 --------------------------------------------------
+CABEÇALHO - geral
+--------------------------------------------------*/
 
-link de acesso aos portais*/
+
+/*link de acesso aos portais*/
 .sessao-cabecalho a p{
 	padding: 3px;
 	border-bottom-left-radius: 5px;
@@ -95,10 +89,12 @@ link de acesso aos portais*/
 
 
 /*
+--------------------------------------------------
 CABEÇALHO - sessao1
 --------------------------------------------------
 /*fundo sessao1 full*/
 .fundo-sessao1-cabecalho{
+	border:1px solid silver;
 	background: rgba(97, 95, 95, 0.16);
 }
 
@@ -133,7 +129,9 @@ CABEÇALHO - sessao1
 }
 
 
+
 /*
+--------------------------------------------------
 CABEÇALHO - sessao2
 --------------------------------------------------
 /* cor de fundo da sessao 2*/
@@ -153,6 +151,7 @@ CABEÇALHO - sessao2
 	background: rgb(255, 100, 1);
 }
 
+/*ancoras da sessao 2*/
 .sessao2-cabecalho a{
 	text-decoration: none;
 	color:white;
@@ -164,22 +163,20 @@ CABEÇALHO - sessao2
 
 /*
 SESSÃO PRINCIPAL
--------------------------
+--------------------------------
 estilo sessao principal
--------------------------*/
+-------------------------------*/
 
 .sessao-principal{
 	position:relative;
-
 }
-
 
 
 
 /*
 GALERIA DE IMAGENS
 ----------------------------------------------------------------
-estilo da estrutura da galeria de imagens e botões de controle
+estilo da estrutura da galeria de imagens e botÃƒÂµes de controle
 ----------------------------------------------------------------*/
 
 /*conteiner*/
@@ -207,7 +204,6 @@ estilo da estrutura da galeria de imagens e botões de controle
 	height: 100%;
 }
 
-
 /*botoes de controle*/
 .conteiner-galeria-imagens span {
 	border-radius: 10%;
@@ -223,7 +219,7 @@ estilo da estrutura da galeria de imagens e botões de controle
 	z-index: 5;
 }
 
-/*a:imagens alinhadas no topo, à esquerda
+/*a:imagens alinhadas no topo, ÃƒÂ  esquerda
 e transparente*/
 #conteiner-imagens a { 
 	position: absolute; 
@@ -232,30 +228,34 @@ e transparente*/
 	opacity: 0;
 }
 
-/*posição dos botoes*/
+/*posiÃƒÂ§ÃƒÂ£o VERTICAL dos botoes*/
 .bt-img1{
-	right: 10px;
 	top: 10px;
 }
 .bt-img2{
-	right: 10px;
 	top: 50px;
 }
 .bt-img3{
-	right: 10px;
 	top: 90px;
 }
 .bt-img4{
-	right: 10px;
 	top: 130px;
 }
 .bt-img5{
-	right: 10px;
 	top: 170px;
 }
 .bt-img6{
-	right: 10px;
 	top: 210px;
+}
+
+/*posiÃƒÂ§ÃƒÂ£o HORIZONTAL dos botoes*/
+.bt-img1,
+.bt-img2,
+.bt-img3,
+.bt-img4,
+.bt-img5,
+.bt-img6{
+	right: 10px;
 }
 
 /*efeitos de mouse dos botoes de controle*/
@@ -277,7 +277,6 @@ e transparente*/
 .ativo {
 	opacity: 1!important; 
 }
-
 
 
 
@@ -339,7 +338,7 @@ e botoes de controle
 
 /*quando a guia da 
 galeria cursos / painel encontre curso 
-é ativada*/
+estiver ativada*/
 .guia-ativa-galeria-curso{
   background-color: #FF2805;
   color:white;
@@ -357,7 +356,7 @@ galeria cursos / painel encontre curso
 
 /*largura do bloco esquerdo*/
 .largura-do-bloco-x{
-	width: 40%; /*para o título da guia*/
+	width: 40%; /*para o tÃƒÂ­tulo da guia*/
 }
 
 .largura-do-bloco-y{
@@ -384,13 +383,13 @@ galeria cursos / painel encontre curso
 
 }
 
-/*posição botao [anterior] (lateral esquerda)*/
+/*posição do botao [anterior] (lateral esquerda)*/
 .bt-curso-destaque-ant{
 	left:2px;
 	
 }
 
-/*posição botao [proximo] (lateral direita)*/
+/*posição do botao [proximo] (lateral direita)*/
 .bt-curso-destaque-prox{
 	right:2px;
 
@@ -403,7 +402,7 @@ galeria cursos / painel encontre curso
 }
 
 
-/*posição do texto dos botoes*/
+/*posição do do texto dos botoes*/
 .bt-curso-destaque-ant span,	
 .bt-curso-destaque-prox span{
 	position:relative;
@@ -413,9 +412,9 @@ galeria cursos / painel encontre curso
 
 
 /*
-Conteúdo da galeria de cursos
+CONTROLES DA GALERIA DE CURSOS
 --------------------------------------------------
-estilo do conteúdo da galeria de cursos
+estilo dos controles da galeria de cursos
 --------------------------------------------------*/
 
 .grupo-cursos ol{
@@ -443,24 +442,26 @@ estilo do conteúdo da galeria de cursos
 	margin: 0 0 30px 15px;
 }
 
-/*título [curso]*/
+/*titulo [curso]*/
 .bloco-curso h1{
 	
 	margin:0 0 8px 0;
 }
 
-/*texto do conteudo*/
+/*itens do bloco de curso*/
 .bloco-curso ol li{
 	list-style: none;
 	padding: 0;
 	font-size: 10pt;
 }
+
+/*texto dos itens*/
 .bloco-curso p{
 	margin: 1px;
 }
 
 
-/*config botão [saber mais]*/
+/*config botao [saber mais]*/
 .bloco-curso a{
 	margin-right:20px;
 	color:white;
@@ -473,8 +474,6 @@ estilo do conteúdo da galeria de cursos
 	right: 5%;
 	bottom:1%;
 }
-
-
 
 
 
@@ -498,7 +497,7 @@ estilo do aside 1
 /*
 BANNER PROPAGANDA / BANNER FALE CONOSCO
 --------------------------------------------------
-estilo imagem do banner propaganda / fale conesco
+estilo imagem do banner propaganda / fale conosco
 --------------------------------------------------
 */
 
@@ -510,8 +509,6 @@ estilo imagem do banner propaganda / fale conesco
 .banner-atendimento img{
 	margin-top: 14px;
 }
-
-
 
 
 
@@ -532,13 +529,15 @@ estilo conteiner encontre seu curso
 }
 
 
-/*config título*/
+/*config cores titulo*/
 .titulo-preto-e-branco{
 
 	background: rgba(0,0,0,.9);
 	color:white;
 
 }
+
+/*espacamento do título*/
 .titulo-preto-e-branco h1{
 	margin:0;
 	padding:20px 0 20px 20px;
@@ -588,7 +587,7 @@ estilo conteiner encontre seu curso
 /*
 SESSAO DE BLOCOS
 ----------------------------------------
-Estilo blocos de informações / notícias / social / etc...
+Estilo blocos de informacoes / noticias / social / etc...
 ----------------------------------------
 */
 
@@ -601,7 +600,7 @@ Estilo blocos de informações / notícias / social / etc...
 }
 
 
-/*configuração padrão dos blocos de informações*/
+/*configuracao padrao dos blocos de informacoes*/
 .bloco-info{
 	position:relative;
 	border: 1px solid silver;
@@ -615,11 +614,12 @@ Estilo blocos de informações / notícias / social / etc...
 }
 
 
+/*esfeitos de mouse do bloco*/
 .bloco-info:hover{
 	box-shadow: 0 0 2px #FF2805;
 }
 
-/*título dos blocos*/
+/*titulo dos blocos*/
 .bloco-info header h1{
 	border-bottom: 1px solid silver;
 	text-align: left;
@@ -630,7 +630,7 @@ Estilo blocos de informações / notícias / social / etc...
 }
 
 
-/*rodapé dos blocos*/
+/*rodape dos blocos*/
 .bloco-info footer h1{
 	border-top:1px solid silver;
 	text-decoration: none;
@@ -639,7 +639,7 @@ Estilo blocos de informações / notícias / social / etc...
 }
 
 
-/*config. blocos de notícias*/
+/*config. blocos de noticias*/
 .rodape-bloco-info{
 	border-top: 1px solid silver;
 	padding-top:8px;
@@ -665,9 +665,9 @@ Estilo blocos de informações / notícias / social / etc...
 /*
 BLOCO 1
 ----------------------------------------
-Estilo blocos de informações / notícias / social / etc...
+Estilo blocos de informacoes / noticias / social / etc...
 ----------------------------------------
-*/
+
 /*bloco 1 - rede social*/
 .bloco-info1{
 	
@@ -695,6 +695,7 @@ bloco 2 bolsas e creditos
 .bloco-info2 aside h1{
 	text-align: left;
 	margin: 10px 40px;
+	font-size:10pt;
 }
 
 /*config paragrafo bloco 2*/
@@ -705,9 +706,8 @@ bloco 2 bolsas e creditos
 
 /*config paragrado do aside do bloco 2*/
 .bloco-info2 aside p{
-	font-size:11pt;
+	font-size: 11pt;
 }
-
 
 
 /*
@@ -741,6 +741,7 @@ encontre a anhanguera
 
 }
 
+/*largura do formulário*/
 .bloco-info3 form{
 	max-width: 100%;
 }
@@ -749,18 +750,17 @@ encontre a anhanguera
 /*
 BLOCO 4
 ----------------------------------------
-Notícias
+Noticias
 ----------------------------------------*/
 .bloco-info4{
 	position:relative;
 }
 
-/*título*/
-.bloco-info4 aside h1{
-	font-size:11pt;
-	margin: 15px 30px 10px 30px;
+/*titulo*/
+.bloco-info4 aside span a h1{
+	margin: 15px 25px 10px 25px;
 	text-align: left;
-	font-size:13pt;
+	font-size: 12pt;
 }
 
 /*paragrafo*/
@@ -776,7 +776,6 @@ Notícias
 }
 
 
-
 /*
 BLOCO 5
 ----------------------------------------
@@ -786,7 +785,7 @@ depoimento de quem faz
 	position: relative;
 }
 
-/*títulos*/
+/*titulos*/
 .bloco-info5 aside h1,
 .bloco-info5 aside h2{
 	font-size:20pt;
@@ -794,33 +793,32 @@ depoimento de quem faz
 	color:silver;	
 }
 
-/*parágrafo*/
+/*img*/
+.bloco-info5 img{
+	float: left;
+	margin: 12px;
+	width: 89px;
+}
+
+/*titulo ASIDE*/
+.bloco-info5 aside h1{
+	text-align: left;
+}
+
+/*subtitulo ASIDE*/
+.bloco-info5 aside h2{
+	text-align: right;
+}
+
+/*paragrafo*/
 .bloco-info5 aside p{
-	font-size:9.5pt;
+	font-size: 9pt;
 	text-align: left;
 	margin:0;
 	
 }
 
-/*img*/
-.bloco-info5 img{
-	float: left;
-	margin: 10px;
-	width: 95px;
-}
-
-
-/*título ASIDE*/
-.bloco-info5 aside h1{
-	text-align: left;
-}
-
-/*subtítulo ASIDE*/
-.bloco-info5 aside h2{
-	text-align: right;
-}
-
-/*subtítulo rodapé*/
+/*subtitulo rodape*/
 .bloco-info5 footer h3{
 	font-size:10pt;
 	text-align: left;
@@ -844,8 +842,6 @@ bloco 6 manual do aluno
 	max-width: 100%;
 	
 }
-
-
 
 
 
@@ -909,23 +905,27 @@ RODAPÉ
 }
 
 
-/*SESSÃO RESPONSÍVIDADE
-PARA: 980px*/
+
+
+/*
+-----------------------------------------------
+SESSAO RESPONSIVIDADE
+PARA: 980px
+------------------------------------------------*/
 @media only screen and (max-width: 980px){
 
-
-	/*responsividade - cabeçalho*/
+	/*responsividade - cabecalho*/
 	.sessao1-cabecalho ol{
 		text-align: center;
 	}
 
 
-	/*RODAPÉ*/
+	/*RODAPE*/
 	.sessao-rodape{
 		font-size:9pt;
 	}
 
-	/*RODAPÉ
+	/*RODAPE
 	centralizar*/
 	.sessao1-rodape,
 	.sessao2-rodape
@@ -933,7 +933,7 @@ PARA: 980px*/
 		text-align: center;
 	}
 
-	/*RODAPÉ
+	/*RODAPE
 	itens da esquerda e 
 	direita agora no centro*/
 	.posicao-x,
@@ -955,7 +955,7 @@ PARA: 980px*/
 	}
 
 	/*ASIDE PRINCIPAL  ajustado para
-	ficar na horizontal com espaçamento 
+	ficar na horizontal com espaÃƒÂ§amento 
 	para colocar os itens lado a lado 
 	na horizontal e centralizado na
 	pagina*/
@@ -969,21 +969,21 @@ PARA: 980px*/
 	}
 
 	/*[PAINEL ENCONTRE SEU CURSO] flutua
-	à esquerda no aside configurado acima*/
+	a esquerda no aside configurado acima*/
 	.conteiner-encontre-cursos{
 		height: 295px;
 		margin:0;
 		float:left;
 	}
 
-	/*lLISTA DE CURSOS [painel encontre
+	/*LISTA DE CURSOS [painel encontre
 	seu curso] aumenta um pouco a altura*/
 	.lista-de-cursos-enc-cur {
-    	height: 133px;
+    	height: 130px;
     }
 
 	/*O GRUPO DE BANNERs flutua
-	à direita no ASIDE configurado acima*/
+	direita no ASIDE configurado acima*/
 	#grupo-banners-aside{
 		float:right;
 		margin:0;
@@ -991,8 +991,11 @@ PARA: 980px*/
 
 }
 
-
-
+/*
+-----------------------------------------------
+SESSAO RESPONSIVIDADE
+PARA: 647px
+------------------------------------------------*/
 @media only screen and (max-width:647px){
 	
 	/*GALERIA DE IMAGENS
@@ -1010,7 +1013,7 @@ PARA: 980px*/
 
 
 	/*GALERIA DE CURSOS
-	tamnaho da fonte do título da
+	tamnaho da fonte do titulo da
 	galeria*/
 	.bloco-titulo-cor h1{
 		font-size: 9pt;
@@ -1018,7 +1021,7 @@ PARA: 980px*/
 
 
 	/*GALERIA DE CURSOS
-	fonte e espaçamentos*/
+	fonte e espacamentos*/
 	.conteiner-galeria-cursos{
 		max-width: 90%;
 		height: 250px;
@@ -1026,7 +1029,7 @@ PARA: 980px*/
 	}
 
 	/*BLOCO DE CURSOS
-	espaçamento*/
+	espacamento*/
 	.bloco-curso {
 		width: 85%;
 		margin: 15px;
@@ -1043,10 +1046,15 @@ PARA: 980px*/
 	
 }
 
+/*
+-----------------------------------------------
+SESSAO RESPONSIVIDADE
+PARA: 440px
+------------------------------------------------*/
 @media only screen and (max-width: 440px){
 	
 	/*GALERIA DE CURSOS
-	título da galeria*/
+	titulo da galeria*/
 	.bloco-titulo-cor h1{
 		font-size: 8pt;
 	}
@@ -1060,6 +1068,11 @@ PARA: 980px*/
 }
 
 
+/*
+-----------------------------------------------
+SESSAO RESPONSIVIDADE
+PARA: 340px
+------------------------------------------------*/
 @media only screen and (max-width: 340px){
 
 	/*Primeiros SMARTS*/

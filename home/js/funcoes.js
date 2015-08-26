@@ -125,7 +125,6 @@ FUNÇÃO DE CONTROLE DA GALERIA DE CURSOS
 */
 function controlesGaleriaCursos(){
 
-
     var controle = {
 
         //Ativa / Desativa a guia da galeria de cursos selecionada
