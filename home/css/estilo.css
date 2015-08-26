@@ -176,7 +176,7 @@ estilo sessao principal
 /*
 GALERIA DE IMAGENS
 ----------------------------------------------------------------
-estilo da estrutura da galeria de imagens e botÃƒÂµes de controle
+estilo da estrutura da galeria de imagens e botoes de controle
 ----------------------------------------------------------------*/
 
 /*conteiner*/
@@ -219,7 +219,7 @@ estilo da estrutura da galeria de imagens e botÃƒÂµes de controle
 	z-index: 5;
 }
 
-/*a:imagens alinhadas no topo, ÃƒÂ  esquerda
+/*a:imagens alinhadas no topo, a esquerda
 e transparente*/
 #conteiner-imagens a { 
 	position: absolute; 
@@ -228,7 +228,7 @@ e transparente*/
 	opacity: 0;
 }
 
-/*posiÃƒÂ§ÃƒÂ£o VERTICAL dos botoes*/
+/*posicao VERTICAL dos botoes*/
 .bt-img1{
 	top: 10px;
 }
@@ -248,7 +248,7 @@ e transparente*/
 	top: 210px;
 }
 
-/*posiÃƒÂ§ÃƒÂ£o HORIZONTAL dos botoes*/
+/*posicao HORIZONTAL dos botoes*/
 .bt-img1,
 .bt-img2,
 .bt-img3,
@@ -277,7 +277,6 @@ e transparente*/
 .ativo {
 	opacity: 1!important; 
 }
-
 
 
 /*
@@ -521,6 +520,7 @@ estilo conteiner encontre seu curso
 
 /*conteiner */
 .conteiner-encontre-cursos{
+	position:relative;
 	border: 1px solid silver;
 	max-width: 300px;
 	height: 270px;
@@ -552,18 +552,22 @@ estilo conteiner encontre seu curso
 /*fonte dos checks(exatas / humanas / biologicas)*/
 #form-encontre-curso label{
 	font-size: 9pt;
-	margin-left: 5px;
+	margin: 10px;
+	float: left;
 }
 
 
 /*lista de cursos*/
 .lista-de-cursos-enc-cur{
-	margin: 15px;
-	padding: 2px;
+	position:absolute;
+	bottom:15px;
+	left:15px;
+	margin:0;
+	padding:0;
 	list-style: none;
 
-	width: 90%;
-	height: 100px;
+	width:90%;
+	height: 38.5%;
 	overflow: scroll;
 }
 
