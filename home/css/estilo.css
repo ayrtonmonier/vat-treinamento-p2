@@ -18,8 +18,8 @@ ESTILO DA PAGINA EM GERAL
 
 
 body{
-	padding:0;
-	margin:0;
+	padding: 0;
+	margin: 0;
 }
 
 /*engloba TUDO*/
@@ -41,8 +41,6 @@ body{
 	margin: 0px auto;
 }
 
-
-
 /*
 --------------------------------------------------
 GENÉRICOS
@@ -59,7 +57,6 @@ GENÉRICOS
 }
 
 
-
 /*
 --------------------------------------------------
 CABEÇALHO - geral
@@ -73,7 +70,7 @@ CABEÇALHO - geral
 	border-bottom-right-radius: 5px;
 	background: rgba(0,0,0,0.8);
 	display: inline;
-	float:right;
+	float: right;
 	color: white;
 	margin: 0;
 	font-size: 8.5pt;
@@ -94,15 +91,15 @@ CABEÇALHO - sessao1
 --------------------------------------------------
 /*fundo sessao1 full*/
 .fundo-sessao1-cabecalho{
-	border:1px solid silver;
+	border: 1px solid silver;
 	background: rgba(97, 95, 95, 0.16);
 }
 
 
 /*sessao1 centro*/
 .sessao1-cabecalho{
-	position:relative;
-	margin-top:0;
+	position: relative;
+	margin-top: 0;
 	background: url("../img/logo.png") no-repeat 5px 6px;
 	height: 125px;
 }
@@ -118,16 +115,15 @@ CABEÇALHO - sessao1
 
 /*h1 semantico escondido*/
 .sessao1-cabecalho h1{
-	visibility:hidden;
+	visibility: hidden;
 }
 
 /*posicionamento da lista 1*/
 .sessao1-cabecalho ol{
-	position:absolute;
-	bottom:0;
-	right:0;	
+	position: absolute;
+	bottom: 0;
+	right: 0;	
 }
-
 
 
 /*
@@ -154,11 +150,10 @@ CABEÇALHO - sessao2
 /*ancoras da sessao 2*/
 .sessao2-cabecalho a{
 	text-decoration: none;
-	color:white;
+	color: white;
 	font-family: sans-serif;
-	padding:15px 10px; 
+	padding: 15px 10px; 
 }
-
 
 
 /*
@@ -168,9 +163,8 @@ estilo sessao principal
 -------------------------------*/
 
 .sessao-principal{
-	position:relative;
+	position: relative;
 }
-
 
 
 /*
@@ -183,8 +177,8 @@ estilo da estrutura da galeria de imagens e botoes de controle
 .conteiner-galeria-imagens{
 	max-width: 620px;
 	height: 295px;
-	margin:16px;
-	padding:0;
+	margin: 16px;
+	padding: 0;
 	background: black;
 }
 
@@ -270,7 +264,7 @@ e transparente*/
 
 /*opacidade de 0 a 1 em 0.9 segundos*/
 .efeito{
-	transition:opacity ease-out 0.9s;
+	transition: opacity ease-out 0.9s;
 }
 
 /*opacidade 1 da imagem ativa*/
@@ -293,21 +287,21 @@ e botoes de controle
 	position: relative;
 	max-width: 620px;
 	height: 268px;
-	margin:16px;
-	padding:0;
+	margin: 16px;
+	padding: 0;
 }
 
 /*titulo da galeria*/
 .bloco-titulo-cor h1{
 	color: #0F83A7;
-	font-size:11pt;
-	margin:10px;
+	font-size: 11pt;
+	margin: 10px;
 }
 
 /*bloco que contem as guias*/
 .bloco-guias{
-	float:right;
-	width:100%;
+	float: right;
+	width: 100%;
 	height: inherit;
 }
 
@@ -331,7 +325,7 @@ e botoes de controle
 /*efeito mouse / guia*/
 .guias-galeria-curso:hover{
   background-color: #FF2805;
-  color:white;
+  color: white;
 
 }
 
@@ -340,7 +334,7 @@ galeria cursos / painel encontre curso
 estiver ativada*/
 .guia-ativa-galeria-curso{
   background-color: #FF2805;
-  color:white;
+  color: white;
 }
 
 /*esconde o radio input*/
@@ -371,33 +365,33 @@ estiver ativada*/
 	font-size: 8pt;
 	vertical-align: center;
 	background: silver;
-	color:#FF2805;
-	position:absolute;
+	color: #FF2805;
+	position: absolute;
 	text-align: center;
 	margin: auto;
 	border: 0;
 	border-radius: 4px;
-	cursor:pointer;
-	z-index:1;
+	cursor: pointer;
+	z-index: 1;
 
 }
 
 /*posição do botao [anterior] (lateral esquerda)*/
 .bt-curso-destaque-ant{
-	left:2px;
+	left: 2px;
 	
 }
 
 /*posição do botao [proximo] (lateral direita)*/
 .bt-curso-destaque-prox{
-	right:2px;
+	right: 2px;
 
 }
 
 .bt-curso-destaque-ant:hover,
 .bt-curso-destaque-prox:hover{
   background-color: #FF2805;
-  color:white;
+  color: white;
 }
 
 
@@ -405,10 +399,8 @@ estiver ativada*/
 .bt-curso-destaque-ant span,	
 .bt-curso-destaque-prox span{
 	position:relative;
-	top:50%;
+	top: 50%;
 }
-
-
 
 /*
 CONTROLES DA GALERIA DE CURSOS
@@ -426,7 +418,7 @@ estilo dos controles da galeria de cursos
 	padding-bottom: 5px;
 	position: relative;
 	width: 48%;
-	margin:0 0 6px 5px;
+	margin: 0 0 6px 5px;
 	display: inline-block;
 }
 
@@ -462,18 +454,17 @@ estilo dos controles da galeria de cursos
 
 /*config botao [saber mais]*/
 .bloco-curso a{
-	margin-right:20px;
-	color:white;
-	border-radius:5px;
+	margin-right: 20px;
+	color: white;
+	border-radius: 5px;
 	padding: 3px 30px;
 	background: #FF2805;
 	font-size: 10pt;
 	text-decoration: none;
 	position: absolute;
 	right: 5%;
-	bottom:1%;
+	bottom: 1%;
 }
-
 
 
 /*
@@ -492,7 +483,6 @@ estilo do aside 1
 }
 
 
-
 /*
 BANNER PROPAGANDA / BANNER FALE CONOSCO
 --------------------------------------------------
@@ -508,7 +498,6 @@ estilo imagem do banner propaganda / fale conosco
 .banner-atendimento img{
 	margin-top: 14px;
 }
-
 
 
 /*
@@ -539,14 +528,14 @@ estilo conteiner encontre seu curso
 
 /*espacamento do título*/
 .titulo-preto-e-branco h1{
-	margin:0;
-	padding:20px 0 20px 20px;
+	margin: 0;
+	padding: 20px 0 20px 20px;
 	z-index: 2;
 }
 
 /*config formulario (checks)*/
 #form-encontre-curso{
-	margin:10px 0;
+	margin: 10px 0;
 }
 
 /*fonte dos checks(exatas / humanas / biologicas)*/
@@ -560,13 +549,13 @@ estilo conteiner encontre seu curso
 /*lista de cursos*/
 .lista-de-cursos-enc-cur{
 	position:absolute;
-	bottom:15px;
-	left:15px;
-	margin:0;
-	padding:0;
+	bottom: 15px;
+	left: 15px;
+	margin: 0;
+	padding: 0;
 	list-style: none;
 
-	width:90%;
+	width: 90%;
 	height: 38.5%;
 	overflow: scroll;
 }
@@ -587,7 +576,6 @@ estilo conteiner encontre seu curso
 }
 
 
-
 /*
 SESSAO DE BLOCOS
 ----------------------------------------
@@ -597,7 +585,7 @@ Estilo blocos de informacoes / noticias / social / etc...
 
 /*config dos blocos*/
 .sessao-de-blocos{
-	margin:12px;
+	margin: 12px;
 	max-width: 100%;
 	text-align: center;
 	clear: both;
@@ -629,27 +617,27 @@ Estilo blocos de informacoes / noticias / social / etc...
 	text-align: left;
 	font-size: 10pt;
 	padding: 6px;
-	color:#1E968F;
-	margin:0;
+	color: #1E968F;
+	margin: 0;
 }
 
 
 /*rodape dos blocos*/
 .bloco-info footer h1{
-	border-top:1px solid silver;
+	border-top: 1px solid silver;
 	text-decoration: none;
-	position:absolute;
-	bottom:5px;
+	position: absolute;
+	bottom: 5px;
 }
 
 
 /*config. blocos de noticias*/
 .rodape-bloco-info{
 	border-top: 1px solid silver;
-	padding-top:8px;
+	padding-top: 8px;
 	position:absolute;
 	left: 0;
-	bottom:0;
+	bottom: 0;
 	width: 100%;
 	height: 35px;
 	text-decoration: none;
@@ -682,7 +670,7 @@ Estilo blocos de informacoes / noticias / social / etc...
 .bloco-info1 p{
 	text-align: center;
 	margin: 40px 10px;
-	font-size:13pt;
+	font-size: 13pt;
 }
 
 
@@ -699,7 +687,7 @@ bloco 2 bolsas e creditos
 .bloco-info2 aside h1{
 	text-align: left;
 	margin: 10px 40px;
-	font-size:10pt;
+	font-size: 10pt;
 }
 
 /*config paragrafo bloco 2*/
@@ -728,21 +716,19 @@ encontre a anhanguera
 .bloco-info3 select{
 	display: block;
 	width: 280px;
-	margin:10px 10px;
+	margin: 10px 10px;
 }
 
 /*inputs select*/
 .bloco-info3 input{
 	color: white;
 	background: #FF2805;
-	border:none;
+	border: none;
 	border-radius: 5px;
-	padding:2px 20px;
-	position:absolute;
+	padding: 2px 20px;
+	position: absolute;
 	right: 13px;
 	bottom: 11px;
-
-
 }
 
 /*largura do formulário*/
@@ -769,7 +755,7 @@ Noticias
 
 /*paragrafo*/
 .bloco-info4 aside p{
-	font-size:9pt;
+	font-size: 9pt;
 	text-align: left;
 	margin: 0 30px;
 }
@@ -792,9 +778,9 @@ depoimento de quem faz
 /*titulos*/
 .bloco-info5 aside h1,
 .bloco-info5 aside h2{
-	font-size:20pt;
-	margin:0;
-	color:silver;	
+	font-size: 20pt;
+	margin: 0;
+	color: silver;	
 }
 
 /*img*/
@@ -818,15 +804,14 @@ depoimento de quem faz
 .bloco-info5 aside p{
 	font-size: 9pt;
 	text-align: left;
-	margin:0;
-	
+	margin: 0;
 }
 
 /*subtitulo rodape*/
 .bloco-info5 footer h3{
-	font-size:10pt;
+	font-size: 10pt;
 	text-align: left;
-	margin:8px;
+	margin: 8px;
 	clear: both;
 	color: #D22407;
 }
@@ -848,14 +833,13 @@ bloco 6 manual do aluno
 }
 
 
-
 /*
 ------------------------------------------
 RODAPÉ
 -----------------------------------------*/
 /*geral*/
 .sessao-rodape{
-	font-size:10pt;
+	font-size: 10pt;
 	max-width: 100%;
 	padding-left: 0;
 }
@@ -865,13 +849,13 @@ RODAPÉ
 	text-decoration: none;
 	color:white;
 	font-family: sans-serif;
-	padding-right:5px; 
+	padding-right: 5px; 
 }
 
 /*espaçamento listas*/
 .sessao-rodape ol{
-	padding:7px 0;
-	margin:0;
+	padding: 7px 0;
+	margin: 0;
 }
 
 /*config sessão 1*/
@@ -923,10 +907,9 @@ PARA: 980px
 		text-align: center;
 	}
 
-
 	/*RODAPE*/
 	.sessao-rodape{
-		font-size:9pt;
+		font-size: 9pt;
 	}
 
 	/*RODAPE
@@ -1015,14 +998,12 @@ PARA: 647px
 		font-size: 9pt;
 	}
 
-
 	/*GALERIA DE CURSOS
 	tamnaho da fonte do titulo da
 	galeria*/
 	.bloco-titulo-cor h1{
 		font-size: 9pt;
 	}
-
 
 	/*GALERIA DE CURSOS
 	fonte e espacamentos*/
@@ -1070,7 +1051,6 @@ PARA: 440px
 	}
 	
 }
-
 
 /*
 -----------------------------------------------
