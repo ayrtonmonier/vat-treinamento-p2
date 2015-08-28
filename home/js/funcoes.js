@@ -1,10 +1,10 @@
 
 /*
 -----------------------------------------------------
-Função de controles da galeria de imagens
+FONÇÕES JAVASCRIPT
 -----------------------------------------------------
 
-Função desenvolvida por:
+Funções desenvolvidas por:
 
 Ayrton Monier
 
@@ -14,6 +14,13 @@ Treinamento HTML5, CSS3 e JAVASCRIPT
 Treinador: VAT Tecnologia S.A / Dev. Fábio Assunção.
 
 -------------------------------------------------------
+
+
+
+
+
+FUNÇÃO DE CONTROLE DA GALERIA DE IMÁGENS
+------------------------------------------------------
 Nesta função, seta-se a classe .ativo no elemento
 a partir do clique no botão da respectiva imagem ao 
 qual se quer mostrar.
@@ -123,28 +130,44 @@ function controlesGaleriaImagens(){
 
 /*
 FUNÇÃO DE CONTROLE DA GALERIA DE CURSOS
+------------------------------------------------------------------
+
+No CSS, a classe ".guia-ativa-galeria-curso" pinta o fundo do label
+indicando que a guia está selecionada.
+
+A função adiciona/remove esta classe na guia (label/input) clicada.
 */
 function controlesGaleriaCursos(){
 
     var controle = {
 
-        //Ativa / Desativa a guia da galeria de cursos selecionada
+        /*Adiciona/remove a classe ".guia-ativa-galeria-curso" 
+        no label (guias) do painel encontre seu curso*/
         guiaSelecionada: function(){
 
-
+            //armazena input(guia) GRADUAÇÃO
             guiaGrad = document.querySelector("#gc-graduacao");
+            //armazena o label (do input) GRADUAÇÃO
             labelGrad = document.querySelector("#gc-label-graduacao");
 
-
+            //armazena input(guia) POS-GRADUAÇÃO
             guiaPosGrad = document.querySelector("#gc-pos-graduacao");
+            //armazena o label (do input) POS-GRADUAÇÃO
             labelPosGrad = document.querySelector("#gc-label-pos-graduacao");
 
+                //se input (guia) graduação SELECIONADO
                 if(guiaGrad.checked){
+                    //remove a classe ".guia-ativa-galeria-curso" do label GRADUAÇÃO
                     labelPosGrad.classList.remove("guia-ativa-galeria-curso");
+                    //adiciona a classe ".guia-ativa-galeria-curso" no label PÓS-GRADUAÇÃO 
                     labelGrad.classList.add("guia-ativa-galeria-curso");
                 }
+
+                //se input (guia) PÓS-graduação SELECIONADO
                 else{
+                    //remove a classe ".guia-ativa-galeria-curso" do label POS-GRADUAÇÃO
                     labelGrad.classList.remove("guia-ativa-galeria-curso");
+                    //adiciona a classe ".guia-ativa-galeria-curso" no label GRADUAÇÃO 
                     labelPosGrad.classList.add("guia-ativa-galeria-curso");
                 }
             }
@@ -162,32 +185,53 @@ function controlesGaleriaCursos(){
 
 /*
 FUNÇÃO DE CONTROLE DO PAINEL ENCONTRE SEU CURSO
+-------------------------------------------------------------------
+
+No CSS, a classe ".guia-ativa-galeria-curso" pinta o fundo do label
+indicando que a guia está selecionada.
+
+A função adiciona/remove esta classe na guia (label/input) clicada.
 */
 function controlesPainelEncontreCursos(){
 
 
     var controle = {
 
-        //Ativa / Desativa a guia do painel encontre seu curso
+        /*Adiciona/remove a classe ".guia-ativa-galeria-curso" 
+        no label (guias) do painel encontre seu curso*/
         guiaSelecionada: function(){
+
+            //armazena input(guia) GRADUAÇÃO
             guiaGrad = document.querySelector("#ec-graduacao");
+            //armazena o label (do input) GRADUAÇÃO
             labelGrad = document.querySelector("#ec-label-graduacao");
 
-
+            //armazena input(guia) POS-GRADUAÇÃO
             guiaPosGrad = document.querySelector("#ec-pos-graduacao");
+            //armazena o label (do input) POS-GRADUAÇÃO
             labelPosGrad = document.querySelector("#ec-label-pos-graduacao");
 
+                //se input (guia) graduação SELECIONADO
                 if(guiaGrad.checked){
+
+                    //remove a classe ".guia-ativa-galeria-curso" do label GRADUAÇÃO
                     labelPosGrad.classList.remove("guia-ativa-galeria-curso");
+
+                    //adiciona a classe ".guia-ativa-galeria-curso" no label PÓS-GRADUAÇÃO 
                     labelGrad.classList.add("guia-ativa-galeria-curso");
                 }
+
+                //se input (guia) PÓS-graduação SELECIONADO
                 else{
+                    //remove a classe ".guia-ativa-galeria-curso" do label POS-GRADUAÇÃO
                     labelGrad.classList.remove("guia-ativa-galeria-curso");
+
+                    //adiciona a classe ".guia-ativa-galeria-curso" no label GRADUAÇÃO 
                     labelPosGrad.classList.add("guia-ativa-galeria-curso");
                 }
             }
 
-            //LISTA DE OUTRAS FUNÇÕES DO PAINEL ENCONTRE CURSOS...
+            //OUTRAS FUNÇÕES DO PAINEL ENCONTRE CURSOS...
 
     }
 
@@ -198,55 +242,108 @@ function controlesPainelEncontreCursos(){
 }
 
 
+/*FUNÇÃO DE CONTROLE DO MENU DROP/DOWN
 
+No CSS, a classe ".menu1-lista-drop-down" é por padrão adicionada ao elemento <ol>
+deixando o menu em blocos de linha. Abaixo de 647px de viewport, a média querie referente
+modifica o valor desta classe fazendo esta lista sumir com a propriedade:valor  display:none. 
+
+Ainda nesta média querie, os elementos <span> (botoes) são programados para serem mostrados e 
+a classe ".menu1-lista-down" é configurada para mostrar uma lista em bloco.
+
+O javascrip se encarrega de adicionar/remover as classes ".menu1-lista-drop-down" e ".menu1-lista-down"
+dependendo do viewport em questao.
+
+*/
 function controlesMenuDropDown(){
 
+    //armazena por padrão que os MENUS 1 e 2 não estao expandidos
     var menu1Expandido = false;
     var menu2Expandido = false;
 
 
     var controle = {
 
+        //controle ao CLICAR NO BOTÃO do menu 1
         expandeEscondeMenu1: function(){
 
+            //caso NÃO ESTEJA expandido
             if(menu1Expandido==false){
+
+                //armazena a o elemento (ol) que está com a classe ".menu1-lista-drop-down"
                 menu1 = document.querySelector(".menu1-lista-drop-down");
+
+                //remove a classe ".menu1-lista-drop-down" do elemento
                 menu1.classList.remove("menu1-lista-drop-down");
+
+                //adciona a classe ".menu1-lista-down" no elemento (mostra expandido)
                 menu1.classList.add("menu1-lista-down");
+
+                //armazena que o menu está expandido
                 menu1Expandido=true;
 
+            //caso JÁ ESTEJA expandido
             }else{
+
+                //armazena a o elemento (ol) que está com a classe ".menu1-lista-down" 
                 menu1 = document.querySelector(".menu1-lista-down");
+
+                //remove a classe ".menu1-lista-down"  do elemento
                 menu1.classList.remove("menu1-lista-down");
+
+                /*adciona a classe "menu1-lista-drop-down" no elemento 
+                (mostra em linha com viewport acima de 647px ou esconde caso abaixo deste)*/ 
                 menu1.classList.add("menu1-lista-drop-down");
+
+                //armazena que não está expandido
                 menu1Expandido=false;
 
             }
         },
 
+        //controle ao CLICAR NO BOTÃO do menu 2
         expandeEscondeMenu2: function(){
 
+            //caso NÃO ESTEJA expandido
             if(menu2Expandido==false){
 
+                //armazena a o elemento (ol) que está com a classe ".menu2-lista-drop-down"
                 menu2 = document.querySelector(".menu2-lista-drop-down");
+
+                //remove a classe ".menu2-lista-drop-down" do elemento
                 menu2.classList.remove("menu2-lista-drop-down");
+
+                //adciona a classe ".menu2-lista-down" no elemento (mostra expandido)
                 menu2.classList.add("menu2-lista-down");
+
+                //armazena que o menu está expandido
                 menu2Expandido=true;
 
+            //caso JÁ ESTEJA expandido
             }else{
 
+                //armazena a o elemento (ol) que está com a classe ".menu2-lista-down" 
                 menu2 = document.querySelector(".menu2-lista-down");
+
+                //remove a classe ".menu2-lista-down"  do elemento
                 menu2.classList.remove("menu2-lista-down");
+
+                /*adciona a classe "menu2-lista-drop-down" no elemento 
+                (mostra em linha com viewport acima de 647px ou esconde caso abaixo deste)*/ 
                 menu2.classList.add("menu2-lista-drop-down");
+
+                //armazena que não está expandido
                 menu2Expandido=false;
             }
         }
 
     }
 
+    //eventos de clique adicionados 
     document.querySelector("#bt-menu1").addEventListener("click", controle.expandeEscondeMenu1);
     document.querySelector("#bt-menu2").addEventListener("click", controle.expandeEscondeMenu2);
 }
+
 
 //carrega as funções junto com a página
 window.addEventListener("load",controlesMenuDropDown);
