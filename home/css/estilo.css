@@ -51,7 +51,7 @@ GENÉRICOS
 	padding: 0;
 }
 
-/*itens da lista de nav*/
+/*itens da lista de nav em linha*/
 .lista-em-linha li{
 	display: inline-block;
 }
@@ -61,7 +61,6 @@ GENÉRICOS
 --------------------------------------------------
 CABEÇALHO - geral
 --------------------------------------------------*/
-
 
 /*link de acesso aos portais*/
 .sessao-cabecalho a p{
@@ -86,31 +85,22 @@ CABEÇALHO - geral
 
 
 /*
---------------------------------------------------
-CABEÇALHO - sessao1
---------------------------------------------------
-/*fundo sessao1 full*/
+------------------------------------------------------------------
+CABEÇALHO - sessao1 - [logo + link de acesso ao portal + menu 1
+------------------------------------------------------------------
+
+/*FUNDO sessao1 100% full*/
 .fundo-sessao1-cabecalho{
-	border: 1px solid silver;
+	border: 1px solid rgba(97, 95, 95, 0.16);
 	background: rgba(97, 95, 95, 0.16);
 }
 
 
 /*sessao1 centro*/
 .sessao1-cabecalho{
-	position: relative;
 	margin-top: 0;
-	background: url("../img/logo.png") no-repeat 5px 6px;
-	height: 125px;
-}
-
-/*links sessao 1*/
-.sessao1-cabecalho a{
-	text-decoration: none;
-	font-family: sans-serif;
-	padding-right:5px;
-	color: #F52424; 
-	font-size: 10pt;
+	background: url("../img/logo.png") no-repeat 10px 10px;
+	height: 80px;
 }
 
 /*h1 semantico escondido*/
@@ -118,33 +108,99 @@ CABEÇALHO - sessao1
 	visibility: hidden;
 }
 
-/*posicionamento da lista 1*/
-.sessao1-cabecalho ol{
-	position: absolute;
-	bottom: 0;
-	right: 0;	
+/*sessao1 - MENU 1 [largura 100% full]*/
+.sessao1-cabecalho-menu{
+	background: rgba(97, 95, 95, 0.16);
 }
+
+/*conteiner do menu [largura centro] */
+.sessao1-cabecalho-conteiner-menu{
+	position:relative;
+	max-height: inherit;
+}
+
+/*ancoras da sessao 1*/
+.sessao1-cabecalho-conteiner-menu a{
+	text-decoration: none;
+	font-family: sans-serif;
+	padding-left:5px;
+	font-size: 10pt;
+	color: #F52424;
+}
+
+/*efeito de mouse no itens*/
+.sessao1-cabecalho-conteiner-menu ol li:hover{
+	background: rgba(0, 0, 0, 0.1);
+}
+
+
+
+/*LISTA drop/down menu1/sessao1
+-----------------------------------------------*/
+
+/*BOTÃO CONTROLE [menu1]
+Lista Drop/Down
+padrão invisível*/
+#bt-menu1{
+	display: none;
+	
+}
+
+
+#bt-menu1:after{
+	content: url("../img/info.png");
+
+}
+
+
+/*lista sem numeracao e a direita*/
+.menu1-lista-drop-down{
+	list-style: none;
+	text-align: right;
+}
+
+/*itens da lista drop/down bloco de linha*/
+.menu1-lista-drop-down li{
+	display: inline-block;
+}
+
+/*quando tela maximizada com 
+(menu1 drop/down aberto, os itens 
+continuam alinhados à direita)*/
+.menu1-lista-down{
+	list-style: none;
+	text-align: right;
+}
+
+/*quando tela maximizada com 
+(menu1 drop/down aberto, os itens 
+continuam em blocos de linha ao minimizar)*/
+.menu1-lista-down li{
+	display: inline-block;
+}
+
+/*---------------------------------------------*/
+
 
 
 /*
 --------------------------------------------------
 CABEÇALHO - sessao2
 --------------------------------------------------
-/* cor de fundo da sessao 2*/
+/*FUNDO sessao2 100% full*/
 .sessao2-cabecalho{
 	background: rgb(255, 40, 5);
 	text-align: center;
 }
-
-/*tamanho da fonte dos itens*/
+/*sessao2 - centro
+tamanho da fonte/display dos itens MENU*/
 .sessao2-cabecalho ol li{
 	font-size: 12pt;
 }
 
-
-/*efeito de mouse*/
+/*efeito de mouse no itens*/
 .sessao2-cabecalho ol li:hover{
-	background: rgb(255, 100, 1);
+	background: rgba(0, 0, 0, 0.6);
 }
 
 /*ancoras da sessao 2*/
@@ -152,16 +208,59 @@ CABEÇALHO - sessao2
 	text-decoration: none;
 	color: white;
 	font-family: sans-serif;
-	padding: 15px 10px; 
+	padding: 15px 7px; 
 }
 
 
+/*LISTA drop/down menu2/sessao2
+-----------------------------------------------*/
+
+/*BOTÃO CONTROLE [menu2]
+Lista Drop/Down
+padrão invisível*/
+#bt-menu2{
+	display: none;
+
+}
+
+#bt-menu2:before{
+	content: url("../img/list.png");
+	text-align: right;
+}
+
+/*lista sem numeracao e a esquerda*/
+.menu2-lista-drop-down{
+	list-style: none;
+}
+
+/*itens da lista drop/down bloco de linha*/
+.menu2-lista-drop-down li{
+	display: inline-block;
+}
+
+/*quando tela maximizada com 
+(menu2 drop/down aberto, os itens 
+continuam alinhados no centro)*/
+.menu2-lista-down{
+	list-style: none;
+	text-align: center;
+}
+
+/*quando tela maximizada com 
+(menu2 drop/down aberto, os itens 
+continuam em blocos de linha ao minimizar)*/
+.menu2-lista-down li{
+	display: inline-block;
+}
+/*---------------------------------------------*/
+
+
+
 /*
-SESSÃO PRINCIPAL
+CORPO - SESSÃO PRINCIPAL
 --------------------------------
 estilo sessao principal
 -------------------------------*/
-
 .sessao-principal{
 	position: relative;
 }
@@ -473,7 +572,6 @@ ASIDE PRINCIPAL
 estilo do aside 1
 ---------------------------------------
 */
-
 .aside-principal{
 	margin:0;
 	position:absolute;
@@ -828,8 +926,7 @@ bloco 6 manual do aluno
 }
 
 .bloco-info6 img{
-	max-width: 100%;
-	
+	max-width: 100%;	
 }
 
 
@@ -877,7 +974,6 @@ RODAPÉ
 	background: rgba(255,1,1,1);
 }
 
-
 /*posição de links da esquerda*/
 .posicao-x{
 	display: inline-block;
@@ -894,7 +990,6 @@ RODAPÉ
 
 
 
-
 /*
 -----------------------------------------------
 SESSAO RESPONSIVIDADE
@@ -905,6 +1000,10 @@ PARA: 980px
 	/*responsividade - cabecalho*/
 	.sessao1-cabecalho ol{
 		text-align: center;
+	}
+
+	.sessao2-cabecalho ol li {
+	    font-size: 9pt;
 	}
 
 	/*RODAPE*/
@@ -985,6 +1084,99 @@ PARA: 647px
 ------------------------------------------------*/
 @media only screen and (max-width:647px){
 	
+	/*LOGO no centro*/
+	.sessao1-cabecalho{
+		background: url("../img/logo.png") no-repeat center;
+	}
+
+
+	/*CABEÇALHO - SESSAO 1 
+	- cor de fundo do menu*/
+	.sessao1-cabecalho-menu{
+		position: relative;
+		max-width: 100%;
+		z-index: 10;
+	}
+
+	/*CABEÇALHO - MENU1 - SESSAO 1
+	posiciona no canto superior direito*/
+	.sessao1-cabecalho-conteiner-menu{
+		background: #DED8D8;
+		border-bottom-left-radius: 15px;
+		box-shadow: 1px 1px 4px black;
+		position: absolute;
+		top:0;
+		right:0;
+	}
+	
+
+	/*botao MENU 1 - LISTA DROP/DOWN
+	- Aparece
+	---------------------------------*/
+	#bt-menu1{
+		display: block;
+		padding: 10px;
+		cursor:pointer;
+		text-align: right;
+	}
+
+	/*LISTA DE ITENS DO menu1
+	- Desaparece*/
+	.menu1-lista-drop-down{
+		list-style: none;
+		display: none;
+	}
+
+	/*MENU drop/down
+	 - Sem numeração e 
+	 alinhado a direita*/
+	.menu1-lista-down{
+		list-style: none;
+		text-align: right;
+	}
+
+	/*LISTA DE ITEN - menu2 drop/down
+	- Em blocos*/
+	.menu1-lista-down li{
+		display: block;
+	}
+
+
+	/*botao MENU 2 - LISTA DROP/DOWN
+	- Aparece
+	---------------------------------*/
+	#bt-menu2{
+		display: block;
+		padding: 10px;
+		cursor:pointer;
+		text-align: left;
+	}
+
+	/*LISTA DE ITENS DO menu2
+	- Desaparece*/
+	.menu2-lista-drop-down{
+		list-style: none;
+		display: none;
+	}
+
+	/*MENU drop/down
+	 - Sem numeração e 
+	 alinhado a esquerda*/
+	.menu2-lista-down{
+		list-style: none;
+		text-align: left;
+	}
+
+	/*LISTA DE ITEN - menu2 drop/down
+	- Em blocos*/
+	.menu2-lista-down li{
+		display: block;
+	}
+
+
+
+
+
 	/*GALERIA DE IMAGENS
 	conteiner retangular*/
 	.conteiner-galeria-imagens{
@@ -999,7 +1191,8 @@ PARA: 647px
 	}
 
 	/*GALERIA DE CURSOS
-	tamnaho da fonte do titulo da
+	tamnaho da fonte do 
+	titulo da
 	galeria*/
 	.bloco-titulo-cor h1{
 		font-size: 9pt;
@@ -1025,10 +1218,10 @@ PARA: 647px
 	[painel encontre seu curso] e os 
 	banners agrupados */
 	.aside-principal{
-
 		max-width: 300px;
 	}
-	
+
+
 }
 
 /*

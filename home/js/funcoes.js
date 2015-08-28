@@ -34,10 +34,12 @@ Os demais imagens tem opacidade 0 por padrão.
 DATA: 21/08/2015
 
 */
+
+
 function controlesGaleriaImagens(){
 
     //armazena as funções de controle da galeria
-    var controles = {
+    var controle = {
 
         //identifica a primeira imagem para setar a classe .ativo 
         autoAtivaPrimeiraImg: function(){
@@ -74,7 +76,7 @@ function controlesGaleriaImagens(){
                 elementoImg.classList.remove("ativo");
                 
                 //executa função pra setar a primeira imagem.
-                controles.autoAtivaPrimeiraImg();
+                controle.autoAtivaPrimeiraImg();
             }
         },
 
@@ -97,25 +99,24 @@ function controlesGaleriaImagens(){
             elementoImg.classList.add("ativo");
 
             //seta novo intervalo de execuxao
-            intervalo = setInterval(controles.autoAtivaProximaImg,3000);
+            intervalo = setInterval(controle.autoAtivaProximaImg,3000);
 
         }
     }
 
     //auto ativa primera imagem
-    controles.autoAtivaPrimeiraImg();
+    controle.autoAtivaPrimeiraImg();
 
     //chama o autoAtivaProximaImg à um determinado tempo
-    var intervalo = setInterval(controles.autoAtivaProximaImg,3000);
+    var intervalo = setInterval(controle.autoAtivaProximaImg,3000);
 
     //eventos de clique adicionados
-    document.querySelector(".bt-img1").addEventListener("click", function(){controles.imgSelecionada("#img1")});
-    document.querySelector(".bt-img2").addEventListener("click", function(){controles.imgSelecionada("#img2")});
-    document.querySelector(".bt-img3").addEventListener("click", function(){controles.imgSelecionada("#img3")});
-    document.querySelector(".bt-img4").addEventListener("click", function(){controles.imgSelecionada("#img4")});
-    document.querySelector(".bt-img5").addEventListener("click", function(){controles.imgSelecionada("#img5")});
-    document.querySelector(".bt-img6").addEventListener("click", function(){controles.imgSelecionada("#img6")});
-
+    document.querySelector(".bt-img1").addEventListener("click", function(){controle.imgSelecionada("#img1")});
+    document.querySelector(".bt-img2").addEventListener("click", function(){controle.imgSelecionada("#img2")});
+    document.querySelector(".bt-img3").addEventListener("click", function(){controle.imgSelecionada("#img3")});
+    document.querySelector(".bt-img4").addEventListener("click", function(){controle.imgSelecionada("#img4")});
+    document.querySelector(".bt-img5").addEventListener("click", function(){controle.imgSelecionada("#img5")});
+    document.querySelector(".bt-img6").addEventListener("click", function(){controle.imgSelecionada("#img6")});
 
 }
 
@@ -129,6 +130,8 @@ function controlesGaleriaCursos(){
 
         //Ativa / Desativa a guia da galeria de cursos selecionada
         guiaSelecionada: function(){
+
+
             guiaGrad = document.querySelector("#gc-graduacao");
             labelGrad = document.querySelector("#gc-label-graduacao");
 
@@ -196,12 +199,57 @@ function controlesPainelEncontreCursos(){
 
 
 
+function controlesMenuDropDown(){
+
+    var menu1Expandido = false;
+    var menu2Expandido = false;
+
+
+    var controle = {
+
+        expandeEscondeMenu1: function(){
+
+            if(menu1Expandido==false){
+                menu1 = document.querySelector(".menu1-lista-drop-down");
+                menu1.classList.remove("menu1-lista-drop-down");
+                menu1.classList.add("menu1-lista-down");
+                menu1Expandido=true;
+
+            }else{
+                menu1 = document.querySelector(".menu1-lista-down");
+                menu1.classList.remove("menu1-lista-down");
+                menu1.classList.add("menu1-lista-drop-down");
+                menu1Expandido=false;
+
+            }
+        },
+
+        expandeEscondeMenu2: function(){
+
+            if(menu2Expandido==false){
+
+                menu2 = document.querySelector(".menu2-lista-drop-down");
+                menu2.classList.remove("menu2-lista-drop-down");
+                menu2.classList.add("menu2-lista-down");
+                menu2Expandido=true;
+
+            }else{
+
+                menu2 = document.querySelector(".menu2-lista-down");
+                menu2.classList.remove("menu2-lista-down");
+                menu2.classList.add("menu2-lista-drop-down");
+                menu2Expandido=false;
+            }
+        }
+
+    }
+
+    document.querySelector("#bt-menu1").addEventListener("click", controle.expandeEscondeMenu1);
+    document.querySelector("#bt-menu2").addEventListener("click", controle.expandeEscondeMenu2);
+}
+
 //carrega as funções junto com a página
+window.addEventListener("load",controlesMenuDropDown);
 window.addEventListener("load",controlesGaleriaImagens);
 window.addEventListener("load",controlesGaleriaCursos);
 window.addEventListener("load",controlesPainelEncontreCursos);
-
-
-
-
-
